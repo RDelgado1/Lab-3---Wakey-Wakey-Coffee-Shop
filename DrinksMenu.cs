@@ -21,5 +21,47 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         {
             this.DialogResult = DialogResult.OK;
         }
+
+        private void sodaButton_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Do you want to add " + sodaLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                Console.WriteLine(sodaLabel.Text + " was added to cart");
+            }
+            else
+            {
+
+            }
+        }
+
+        private void waterButton_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Do you want to add " + waterLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                Console.WriteLine(waterLabel.Text + " was added to cart");
+            }
+            else
+            {
+
+            }
+        }
+
+        private void beerButton_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Do you want to add " + beerButton.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                Console.WriteLine(beerLabel.Text + " was added to cart");
+            }
+            else
+            {
+
+            }
+        }
     }
 }

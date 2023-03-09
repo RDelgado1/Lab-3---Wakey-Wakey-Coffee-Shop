@@ -35,5 +35,33 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
             }
         }
+
+        private void pizzaButton_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Do you want to add " + pizzaLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                Console.WriteLine(pizzaLabel.Text + " was added to cart");
+            }
+            else
+            {
+
+            }
+        }
+
+        private void saladButton_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Do you want to add " + saladLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                Console.WriteLine(saladLabel.Text + " was added to cart");
+            }
+            else
+            {
+
+            }
+        }
     }
 }
