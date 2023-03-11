@@ -29,6 +29,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             if(confirmResult == DialogResult.Yes)
             {
                 Console.WriteLine(burgerLabel.Text + " was added to cart");
+                shoppingCart.cart.Add("one");
             }
             else
             {
@@ -43,6 +44,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             if (confirmResult == DialogResult.Yes)
             {
                 Console.WriteLine(pizzaLabel.Text + " was added to cart");
+                shoppingCart.cart.Add("two");
             }
             else
             {

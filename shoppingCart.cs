@@ -12,6 +12,9 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 {
     public partial class shoppingCart : Form
     {
+        public static List<String> cart = new List<string>();
+
+        public FoodMenu foodMenuCart = new FoodMenu();
         public shoppingCart()
         {
             InitializeComponent();
