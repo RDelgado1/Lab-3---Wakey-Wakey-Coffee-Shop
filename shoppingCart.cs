@@ -14,6 +14,14 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
     {
         public static List<String> cart = new List<string>();
 
+        public static class foodItem
+        {
+            public static int id;
+            public static string foodName;
+            public static decimal foodPrice;
+            public static int foodCount;
+        }
+
         public FoodMenu foodMenuCart = new FoodMenu();
         public shoppingCart()
         {
