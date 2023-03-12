@@ -30,6 +30,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         private void InitializeComponent()
         {
             this.cartBackButton = new System.Windows.Forms.Button();
+            this.cartView = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // cartBackButton
@@ -43,11 +44,21 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.cartBackButton.UseVisualStyleBackColor = true;
             this.cartBackButton.Click += new System.EventHandler(this.cartBackButton_Click);
             // 
+            // cartView
+            // 
+            this.cartView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cartView.FormattingEnabled = true;
+            this.cartView.Location = new System.Drawing.Point(0, 0);
+            this.cartView.Name = "cartView";
+            this.cartView.Size = new System.Drawing.Size(800, 450);
+            this.cartView.TabIndex = 1;
+            // 
             // shoppingCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cartView);
             this.Controls.Add(this.cartBackButton);
             this.Name = "shoppingCart";
             this.Text = "shoppingCart";
@@ -58,5 +69,6 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         #endregion
 
         private System.Windows.Forms.Button cartBackButton;
+        private System.Windows.Forms.ListBox cartView;
     }
 }
