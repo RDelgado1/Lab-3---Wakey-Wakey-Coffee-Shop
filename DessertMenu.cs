@@ -32,6 +32,46 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             public decimal dessertPrice;
             public int dessertStock;
         }
+
+        private void dessertGet(int id)
+        {
+            dessertItem dessertCart = new dessertItem();
+
+            try
+            {
+                string sql = "SELECT id, dessertName, dessertPrice FROM dessertmenu where id = " + id;
+                conn = new MySqlConnection(connection_string);
+                cmd = new MySqlCommand(sql, conn);
+
+                conn.Open();
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    //foodItem.id = reader.GetInt32("id");
+                    dessertCart.id = reader.GetInt32("id");
+                    dessertCart.dessertName = reader.GetString("dessertName");
+                    dessertCart.dessertPrice = reader.GetDecimal("dessertPrice");
+                    dessertCart.dessertStock = 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(string.Format("An error occurred {0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (reader != null) reader.Close();
+                if (conn != null) conn.Close();
+            }
+
+            //Console.WriteLine(burgerLabel.Text + " was added to cart");
+            shoppingCart.dessertMenuCart.Add(dessertCart);
+
+            var burgerConfirm = MessageBox.Show(dessertCart.dessertName + " was added to your cart!", "Success!", MessageBoxButtons.OK);
+        }
+
         public DessertMenu()
         {
             InitializeComponent();
@@ -44,87 +84,21 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
         private void sliceOfCakeButton_Click(object sender, EventArgs e)
         {
-            dessertItem dessertCart = new dessertItem();
             var confirmResult = MessageBox.Show("Do you want to add " + sliceOfCakeLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
 
             if (confirmResult == DialogResult.Yes)
             {
-                try
-                {
-                    string sql = "SELECT id, dessertName, dessertPrice FROM dessertmenu where id = 1";
-                    conn = new MySqlConnection(connection_string);
-                    cmd = new MySqlCommand(sql, conn);
-
-                    conn.Open();
-
-                    reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        //foodItem.id = reader.GetInt32("id");
-                        dessertCart.id = reader.GetInt32("id");
-                        dessertCart.dessertName = reader.GetString("dessertName");
-                        dessertCart.dessertPrice = reader.GetDecimal("dessertPrice");
-                        dessertCart.dessertStock = 1;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(string.Format("An error occurred {0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    if (reader != null) reader.Close();
-                    if (conn != null) conn.Close();
-                }
-
-                //Console.WriteLine(burgerLabel.Text + " was added to cart");
-                shoppingCart.dessertMenuCart.Add(dessertCart);
-
-                var burgerConfirm = MessageBox.Show(dessertCart.dessertName + " was added to your cart!", "Success!", MessageBoxButtons.OK);
+                dessertGet(1);
             }
         }
 
         private void souffleButton_Click(object sender, EventArgs e)
         {
-            dessertItem dessertCart = new dessertItem();
             var confirmResult = MessageBox.Show("Do you want to add " + souffleLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
 
             if (confirmResult == DialogResult.Yes)
             {
-                try
-                {
-                    string sql = "SELECT id, dessertName, dessertPrice FROM dessertmenu where id = 2";
-                    conn = new MySqlConnection(connection_string);
-                    cmd = new MySqlCommand(sql, conn);
-
-                    conn.Open();
-
-                    reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        //foodItem.id = reader.GetInt32("id");
-                        dessertCart.id = reader.GetInt32("id");
-                        dessertCart.dessertName = reader.GetString("dessertName");
-                        dessertCart.dessertPrice = reader.GetDecimal("dessertPrice");
-                        dessertCart.dessertStock = 1;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(string.Format("An error occurred {0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    if (reader != null) reader.Close();
-                    if (conn != null) conn.Close();
-                }
-
-                //Console.WriteLine(burgerLabel.Text + " was added to cart");
-                shoppingCart.dessertMenuCart.Add(dessertCart);
-
-                var burgerConfirm = MessageBox.Show(dessertCart.dessertName + " was added to your cart!", "Success!", MessageBoxButtons.OK);
+                dessertGet(2);
             }
         }
     }

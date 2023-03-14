@@ -20,6 +20,30 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         public shoppingCart()
         {
             InitializeComponent();
+
+            if(foodMenuCart.Count != 0)
+            {
+                foreach(FoodMenu.foodItem entry in foodMenuCart)
+                {
+                    Console.WriteLine(entry.foodName);
+                }
+            }
+
+            if (drinkMenuCart.Count != 0)
+            {
+                foreach (DrinksMenu.drinkItem entry in drinkMenuCart)
+                {
+                    Console.WriteLine(entry.drinkName);
+                }
+            }
+
+            if (dessertMenuCart.Count != 0)
+            {
+                foreach (DessertMenu.dessertItem entry in dessertMenuCart)
+                {
+                    Console.WriteLine(entry.dessertName);
+                }
+            }
         }
 
         private void cartBackButton_Click(object sender, EventArgs e)

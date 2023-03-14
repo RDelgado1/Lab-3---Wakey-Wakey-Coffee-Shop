@@ -30,36 +30,27 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         private void InitializeComponent()
         {
             this.cartBackButton = new System.Windows.Forms.Button();
-            this.cartView = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // cartBackButton
             // 
             this.cartBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cartBackButton.Location = new System.Drawing.Point(12, 415);
+            this.cartBackButton.Location = new System.Drawing.Point(24, 798);
+            this.cartBackButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cartBackButton.Name = "cartBackButton";
-            this.cartBackButton.Size = new System.Drawing.Size(75, 23);
+            this.cartBackButton.Size = new System.Drawing.Size(150, 44);
             this.cartBackButton.TabIndex = 0;
             this.cartBackButton.Text = "Back";
             this.cartBackButton.UseVisualStyleBackColor = true;
             this.cartBackButton.Click += new System.EventHandler(this.cartBackButton_Click);
             // 
-            // cartView
-            // 
-            this.cartView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartView.FormattingEnabled = true;
-            this.cartView.Location = new System.Drawing.Point(0, 0);
-            this.cartView.Name = "cartView";
-            this.cartView.Size = new System.Drawing.Size(800, 450);
-            this.cartView.TabIndex = 1;
-            // 
             // shoppingCart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cartView);
+            this.ClientSize = new System.Drawing.Size(1600, 865);
             this.Controls.Add(this.cartBackButton);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "shoppingCart";
             this.Text = "shoppingCart";
             this.ResumeLayout(false);
@@ -69,6 +60,5 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         #endregion
 
         private System.Windows.Forms.Button cartBackButton;
-        private System.Windows.Forms.ListBox cartView;
     }
 }

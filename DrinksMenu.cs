@@ -33,6 +33,45 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             public int drinkStock;
         }
 
+        private void drinkGet(int id)
+        {
+            drinkItem drinkCart = new drinkItem();
+
+            try
+            {
+                string sql = "SELECT id, drinkName, drinkPrice FROM drinkmenu where id = " + id;
+                conn = new MySqlConnection(connection_string);
+                cmd = new MySqlCommand(sql, conn);
+
+                conn.Open();
+
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    //foodItem.id = reader.GetInt32("id");
+                    drinkCart.id = reader.GetInt32("id");
+                    drinkCart.drinkName = reader.GetString("drinkName");
+                    drinkCart.drinkPrice = reader.GetDecimal("drinkPrice");
+                    drinkCart.drinkStock = 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(string.Format("An error occurred {0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (reader != null) reader.Close();
+                if (conn != null) conn.Close();
+            }
+
+            //Console.WriteLine(burgerLabel.Text + " was added to cart");
+            shoppingCart.drinkMenuCart.Add(drinkCart);
+
+            var burgerConfirm = MessageBox.Show(drinkCart.drinkName + " was added to your cart!", "Success!", MessageBoxButtons.OK);
+        }
+
         public DrinksMenu()
         {
             InitializeComponent();
@@ -45,130 +84,32 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
         private void sodaButton_Click(object sender, EventArgs e)
         {
-            drinkItem drinkCart = new drinkItem();
+            
             var confirmResult = MessageBox.Show("Do you want to add " + sodaLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
 
             if (confirmResult == DialogResult.Yes)
             {
-                try
-                {
-                    string sql = "SELECT id, drinkName, drinkPrice FROM drinkmenu where id = 1";
-                    conn = new MySqlConnection(connection_string);
-                    cmd = new MySqlCommand(sql, conn);
-
-                    conn.Open();
-
-                    reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        //foodItem.id = reader.GetInt32("id");
-                        drinkCart.id = reader.GetInt32("id");
-                        drinkCart.drinkName = reader.GetString("drinkName");
-                        drinkCart.drinkPrice = reader.GetDecimal("drinkPrice");
-                        drinkCart.drinkStock = 1;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(string.Format("An error occurred {0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    if (reader != null) reader.Close();
-                    if (conn != null) conn.Close();
-                }
-
-                //Console.WriteLine(burgerLabel.Text + " was added to cart");
-                shoppingCart.drinkMenuCart.Add(drinkCart);
-
-                var burgerConfirm = MessageBox.Show(drinkCart.drinkName + " was added to your cart!", "Success!", MessageBoxButtons.OK);
+                drinkGet(1);
             }
         }
 
         private void waterButton_Click(object sender, EventArgs e)
         {
-            drinkItem drinkCart = new drinkItem();
             var confirmResult = MessageBox.Show("Do you want to add " + waterLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
 
             if (confirmResult == DialogResult.Yes)
             {
-                try
-                {
-                    string sql = "SELECT id, drinkName, drinkPrice FROM drinkmenu where id = 2";
-                    conn = new MySqlConnection(connection_string);
-                    cmd = new MySqlCommand(sql, conn);
-
-                    conn.Open();
-
-                    reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        //foodItem.id = reader.GetInt32("id");
-                        drinkCart.id = reader.GetInt32("id");
-                        drinkCart.drinkName = reader.GetString("drinkName");
-                        drinkCart.drinkPrice = reader.GetDecimal("drinkPrice");
-                        drinkCart.drinkStock = 1;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(string.Format("An error occurred {0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    if (reader != null) reader.Close();
-                    if (conn != null) conn.Close();
-                }
-
-                //Console.WriteLine(burgerLabel.Text + " was added to cart");
-                shoppingCart.drinkMenuCart.Add(drinkCart);
-
-                var burgerConfirm = MessageBox.Show(drinkCart.drinkName + " was added to your cart!", "Success!", MessageBoxButtons.OK);
+                drinkGet(2);
             }
         }
 
         private void beerButton_Click(object sender, EventArgs e)
         {
-            drinkItem drinkCart = new drinkItem();
             var confirmResult = MessageBox.Show("Do you want to add " + beerLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
 
             if (confirmResult == DialogResult.Yes)
             {
-                try
-                {
-                    string sql = "SELECT id, drinkName, drinkPrice FROM drinkmenu where id = 3";
-                    conn = new MySqlConnection(connection_string);
-                    cmd = new MySqlCommand(sql, conn);
-
-                    conn.Open();
-
-                    reader = cmd.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        //foodItem.id = reader.GetInt32("id");
-                        drinkCart.id = reader.GetInt32("id");
-                        drinkCart.drinkName = reader.GetString("drinkName");
-                        drinkCart.drinkPrice = reader.GetDecimal("drinkPrice");
-                        drinkCart.drinkStock = 1;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(string.Format("An error occurred {0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    if (reader != null) reader.Close();
-                    if (conn != null) conn.Close();
-                }
-
-                //Console.WriteLine(burgerLabel.Text + " was added to cart");
-                shoppingCart.drinkMenuCart.Add(drinkCart);
-
-                var burgerConfirm = MessageBox.Show(drinkCart.drinkName + " was added to your cart!", "Success!", MessageBoxButtons.OK);
+                drinkGet(3);
             }
         }
     }
