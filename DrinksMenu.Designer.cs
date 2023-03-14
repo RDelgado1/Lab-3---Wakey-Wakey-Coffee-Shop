@@ -50,7 +50,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // drinksBackButton
             // 
             this.drinksBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.drinksBackButton.Location = new System.Drawing.Point(12, 415);
+            this.drinksBackButton.Location = new System.Drawing.Point(3, 424);
             this.drinksBackButton.Name = "drinksBackButton";
             this.drinksBackButton.Size = new System.Drawing.Size(75, 23);
             this.drinksBackButton.TabIndex = 0;
@@ -72,18 +72,20 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.drinksBackButton, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
@@ -94,12 +96,12 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel2.Controls.Add(this.sodaButton, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.sodaLabel, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 153);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 143);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(260, 144);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(260, 134);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // sodaButton
@@ -108,7 +110,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.sodaButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sodaButton.Location = new System.Drawing.Point(3, 3);
             this.sodaButton.Name = "sodaButton";
-            this.sodaButton.Size = new System.Drawing.Size(254, 125);
+            this.sodaButton.Size = new System.Drawing.Size(254, 115);
             this.sodaButton.TabIndex = 0;
             this.sodaButton.UseVisualStyleBackColor = true;
             this.sodaButton.Click += new System.EventHandler(this.sodaButton_Click);
@@ -117,7 +119,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // 
             this.sodaLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.sodaLabel.AutoSize = true;
-            this.sodaLabel.Location = new System.Drawing.Point(114, 131);
+            this.sodaLabel.Location = new System.Drawing.Point(114, 121);
             this.sodaLabel.Name = "sodaLabel";
             this.sodaLabel.Size = new System.Drawing.Size(32, 13);
             this.sodaLabel.TabIndex = 1;
@@ -130,12 +132,12 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel3.Controls.Add(this.waterButton, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.waterLabel, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(269, 153);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(269, 143);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(260, 144);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(260, 134);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // waterButton
@@ -144,7 +146,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.waterButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.waterButton.Location = new System.Drawing.Point(3, 3);
             this.waterButton.Name = "waterButton";
-            this.waterButton.Size = new System.Drawing.Size(254, 125);
+            this.waterButton.Size = new System.Drawing.Size(254, 115);
             this.waterButton.TabIndex = 0;
             this.waterButton.UseVisualStyleBackColor = true;
             this.waterButton.Click += new System.EventHandler(this.waterButton_Click);
@@ -153,7 +155,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // 
             this.waterLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.waterLabel.AutoSize = true;
-            this.waterLabel.Location = new System.Drawing.Point(112, 131);
+            this.waterLabel.Location = new System.Drawing.Point(112, 121);
             this.waterLabel.Name = "waterLabel";
             this.waterLabel.Size = new System.Drawing.Size(36, 13);
             this.waterLabel.TabIndex = 1;
@@ -166,12 +168,12 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel4.Controls.Add(this.beerButton, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.beerLabel, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(535, 153);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(535, 143);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(262, 144);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(262, 134);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // beerButton
@@ -180,7 +182,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.beerButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.beerButton.Location = new System.Drawing.Point(3, 3);
             this.beerButton.Name = "beerButton";
-            this.beerButton.Size = new System.Drawing.Size(256, 125);
+            this.beerButton.Size = new System.Drawing.Size(256, 115);
             this.beerButton.TabIndex = 0;
             this.beerButton.UseVisualStyleBackColor = true;
             this.beerButton.Click += new System.EventHandler(this.beerButton_Click);
@@ -189,7 +191,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // 
             this.beerLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.beerLabel.AutoSize = true;
-            this.beerLabel.Location = new System.Drawing.Point(116, 131);
+            this.beerLabel.Location = new System.Drawing.Point(116, 121);
             this.beerLabel.Name = "beerLabel";
             this.beerLabel.Size = new System.Drawing.Size(29, 13);
             this.beerLabel.TabIndex = 1;
@@ -201,7 +203,6 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.drinksMenuTitleLabel);
-            this.Controls.Add(this.drinksBackButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "DrinksMenu";
             this.Text = "DrinksMenu";

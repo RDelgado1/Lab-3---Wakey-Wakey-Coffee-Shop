@@ -46,7 +46,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // dessertBackButton
             // 
             this.dessertBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dessertBackButton.Location = new System.Drawing.Point(12, 415);
+            this.dessertBackButton.Location = new System.Drawing.Point(3, 424);
             this.dessertBackButton.Name = "dessertBackButton";
             this.dessertBackButton.Size = new System.Drawing.Size(75, 23);
             this.dessertBackButton.TabIndex = 0;
@@ -69,16 +69,17 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dessertBackButton, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
@@ -89,12 +90,12 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel2.Controls.Add(this.sliceOfCakeButton, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.sliceOfCakeLabel, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 153);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 143);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(394, 144);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(394, 134);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // sliceOfCakeButton
@@ -103,7 +104,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.sliceOfCakeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sliceOfCakeButton.Location = new System.Drawing.Point(3, 3);
             this.sliceOfCakeButton.Name = "sliceOfCakeButton";
-            this.sliceOfCakeButton.Size = new System.Drawing.Size(388, 125);
+            this.sliceOfCakeButton.Size = new System.Drawing.Size(388, 115);
             this.sliceOfCakeButton.TabIndex = 0;
             this.sliceOfCakeButton.UseVisualStyleBackColor = true;
             this.sliceOfCakeButton.Click += new System.EventHandler(this.sliceOfCakeButton_Click);
@@ -112,7 +113,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // 
             this.sliceOfCakeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.sliceOfCakeLabel.AutoSize = true;
-            this.sliceOfCakeLabel.Location = new System.Drawing.Point(162, 131);
+            this.sliceOfCakeLabel.Location = new System.Drawing.Point(162, 121);
             this.sliceOfCakeLabel.Name = "sliceOfCakeLabel";
             this.sliceOfCakeLabel.Size = new System.Drawing.Size(70, 13);
             this.sliceOfCakeLabel.TabIndex = 1;
@@ -125,12 +126,12 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel4.Controls.Add(this.souffleButton, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.souffleLabel, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(403, 153);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(403, 143);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(394, 144);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(394, 134);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // souffleButton
@@ -139,7 +140,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.souffleButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.souffleButton.Location = new System.Drawing.Point(3, 3);
             this.souffleButton.Name = "souffleButton";
-            this.souffleButton.Size = new System.Drawing.Size(388, 125);
+            this.souffleButton.Size = new System.Drawing.Size(388, 115);
             this.souffleButton.TabIndex = 0;
             this.souffleButton.UseVisualStyleBackColor = true;
             this.souffleButton.Click += new System.EventHandler(this.souffleButton_Click);
@@ -148,7 +149,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // 
             this.souffleLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.souffleLabel.AutoSize = true;
-            this.souffleLabel.Location = new System.Drawing.Point(177, 131);
+            this.souffleLabel.Location = new System.Drawing.Point(177, 121);
             this.souffleLabel.Name = "souffleLabel";
             this.souffleLabel.Size = new System.Drawing.Size(40, 13);
             this.souffleLabel.TabIndex = 1;
@@ -160,7 +161,6 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dessertMenuTitleLabel);
-            this.Controls.Add(this.dessertBackButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "DessertMenu";
             this.Text = "DessertMenu";

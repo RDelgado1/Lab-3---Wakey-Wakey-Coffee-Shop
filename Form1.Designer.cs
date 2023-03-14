@@ -30,7 +30,6 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.storeName = new System.Windows.Forms.Label();
             this.menuTable = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.foodLabel = new System.Windows.Forms.Label();
@@ -42,10 +41,13 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.drinkButton = new System.Windows.Forms.Button();
             this.drinksLabel = new System.Windows.Forms.Label();
             this.cartButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.menuTable.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -56,35 +58,24 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 0;
             // 
-            // storeName
-            // 
-            this.storeName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.storeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storeName.Location = new System.Drawing.Point(0, 0);
-            this.storeName.Name = "storeName";
-            this.storeName.Size = new System.Drawing.Size(800, 39);
-            this.storeName.TabIndex = 1;
-            this.storeName.Text = "Wakey Wakey Coffee Shop";
-            this.storeName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // menuTable
             // 
             this.menuTable.ColumnCount = 3;
             this.menuTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.menuTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.menuTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.menuTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.menuTable.Controls.Add(this.tableLayoutPanel1, 0, 1);
             this.menuTable.Controls.Add(this.tableLayoutPanel2, 1, 1);
             this.menuTable.Controls.Add(this.tableLayoutPanel3, 2, 1);
-            this.menuTable.Controls.Add(this.cartButton, 2, 2);
+            this.menuTable.Controls.Add(this.cartButton, 2, 3);
             this.menuTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuTable.Location = new System.Drawing.Point(0, 0);
             this.menuTable.Name = "menuTable";
-            this.menuTable.RowCount = 3;
+            this.menuTable.RowCount = 4;
             this.menuTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.menuTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.menuTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.menuTable.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.menuTable.Size = new System.Drawing.Size(800, 450);
             this.menuTable.TabIndex = 6;
             // 
@@ -95,19 +86,19 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel1.Controls.Add(this.foodLabel, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.foodButton, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 153);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 140);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(260, 144);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(260, 131);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
             // foodLabel
             // 
             this.foodLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.foodLabel.AutoSize = true;
-            this.foodLabel.Location = new System.Drawing.Point(114, 131);
+            this.foodLabel.Location = new System.Drawing.Point(114, 118);
             this.foodLabel.Name = "foodLabel";
             this.foodLabel.Size = new System.Drawing.Size(31, 13);
             this.foodLabel.TabIndex = 3;
@@ -122,7 +113,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.foodButton.Image = global::Lab_3___Wakey_Wakey_Coffee_Shop.Properties.Resources.foodMenuPhoto;
             this.foodButton.Location = new System.Drawing.Point(3, 3);
             this.foodButton.Name = "foodButton";
-            this.foodButton.Size = new System.Drawing.Size(254, 125);
+            this.foodButton.Size = new System.Drawing.Size(254, 112);
             this.foodButton.TabIndex = 2;
             this.foodButton.UseVisualStyleBackColor = true;
             this.foodButton.Click += new System.EventHandler(this.foodButton_Click);
@@ -134,12 +125,12 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel2.Controls.Add(this.dessertButton, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.dessertLabel, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(269, 153);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(269, 140);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(260, 144);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(260, 131);
             this.tableLayoutPanel2.TabIndex = 8;
             // 
             // dessertButton
@@ -151,7 +142,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.dessertButton.Image = global::Lab_3___Wakey_Wakey_Coffee_Shop.Properties.Resources.dessertMenuPhoto;
             this.dessertButton.Location = new System.Drawing.Point(3, 3);
             this.dessertButton.Name = "dessertButton";
-            this.dessertButton.Size = new System.Drawing.Size(254, 125);
+            this.dessertButton.Size = new System.Drawing.Size(254, 112);
             this.dessertButton.TabIndex = 4;
             this.dessertButton.UseVisualStyleBackColor = true;
             this.dessertButton.Click += new System.EventHandler(this.dessertButton_Click);
@@ -160,7 +151,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // 
             this.dessertLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dessertLabel.AutoSize = true;
-            this.dessertLabel.Location = new System.Drawing.Point(108, 131);
+            this.dessertLabel.Location = new System.Drawing.Point(108, 118);
             this.dessertLabel.Name = "dessertLabel";
             this.dessertLabel.Size = new System.Drawing.Size(43, 13);
             this.dessertLabel.TabIndex = 5;
@@ -173,12 +164,12 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel3.Controls.Add(this.drinkButton, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.drinksLabel, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(535, 153);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(535, 140);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(262, 144);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(262, 131);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
             // drinkButton
@@ -190,7 +181,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.drinkButton.Image = global::Lab_3___Wakey_Wakey_Coffee_Shop.Properties.Resources.drinksMenuPhoto;
             this.drinkButton.Location = new System.Drawing.Point(3, 3);
             this.drinkButton.Name = "drinkButton";
-            this.drinkButton.Size = new System.Drawing.Size(256, 125);
+            this.drinkButton.Size = new System.Drawing.Size(256, 112);
             this.drinkButton.TabIndex = 3;
             this.drinkButton.UseVisualStyleBackColor = true;
             this.drinkButton.Click += new System.EventHandler(this.drinkButton_Click);
@@ -199,7 +190,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // 
             this.drinksLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.drinksLabel.AutoSize = true;
-            this.drinksLabel.Location = new System.Drawing.Point(112, 131);
+            this.drinksLabel.Location = new System.Drawing.Point(112, 118);
             this.drinksLabel.Name = "drinksLabel";
             this.drinksLabel.Size = new System.Drawing.Size(37, 13);
             this.drinksLabel.TabIndex = 4;
@@ -216,12 +207,37 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.cartButton.UseVisualStyleBackColor = true;
             this.cartButton.Click += new System.EventHandler(this.cartButton_Click);
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.titleLabel, 0, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(800, 45);
+            this.tableLayoutPanel4.TabIndex = 7;
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Location = new System.Drawing.Point(184, 0);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(432, 39);
+            this.titleLabel.TabIndex = 0;
+            this.titleLabel.Text = "Wakey Wakey Coffee Shop";
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // mainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.storeName);
+            this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuTable);
             this.Name = "mainMenu";
@@ -233,6 +249,8 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,7 +259,6 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label storeName;
         private System.Windows.Forms.Button foodButton;
         private System.Windows.Forms.Button drinkButton;
         private System.Windows.Forms.Button dessertButton;
@@ -253,6 +270,8 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         private System.Windows.Forms.Label dessertLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label drinksLabel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Label titleLabel;
     }
 }
 
