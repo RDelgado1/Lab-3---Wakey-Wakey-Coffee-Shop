@@ -18,6 +18,8 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
         decimal grandTotal;
 
+        public static bool pay;
+
         private void checkout()
         {
             if (shoppingCart.foodMenuCart.Count > 0)
@@ -90,6 +92,8 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         {
             InitializeComponent();
 
+            pay = false;
+
             checkout();
 
             totalGet();
@@ -102,6 +106,25 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         private void cancelCheckout_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void payButton_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("paying now");
+
+            var confirmResult = MessageBox.Show("Order was successfully made", "Order Check Out", MessageBoxButtons.OK);
+
+            if (confirmResult == DialogResult.OK)
+            {
+
+                shoppingCart.foodMenuCart.Clear();
+                shoppingCart.drinkMenuCart.Clear();
+                shoppingCart.dessertMenuCart.Clear();
+
+                Console.WriteLine(shoppingCart.foodMenuCart.Count);
+
+                this.Close();
+            }
         }
     }
 }

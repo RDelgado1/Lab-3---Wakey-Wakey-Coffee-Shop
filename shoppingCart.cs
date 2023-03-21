@@ -149,6 +149,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             if(confirmResult == DialogResult.Yes)
             {
                 cartCheckOut();
+                this.Close();
             }
         }
     }
