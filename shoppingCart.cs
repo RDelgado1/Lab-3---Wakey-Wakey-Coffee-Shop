@@ -24,12 +24,12 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
                 foreach (FoodMenu.foodItem food in foodMenuCart)
                 {
-                    foodCheckList.Items.Add(food.foodName + " $" + food.foodPrice);
+                    foodCheckList.Items.Add(food.foodName + "\t\t\t\t$" + food.foodPrice);
                 }
             }
             else
             {
-                foodCartLabel.Text = "No food Added";
+                foodCartLabel.Text = "No Food Added";
                 foodCheckList.Hide();
             }
 
@@ -39,7 +39,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
                 foreach(DrinksMenu.drinkItem drink in drinkMenuCart)
                 {
-                    drinkCheckList.Items.Add(drink.drinkName + " $" + drink.drinkPrice);
+                    drinkCheckList.Items.Add(drink.drinkName + "\t\t\t\t$" + drink.drinkPrice);
                 }
             }
             else
@@ -54,7 +54,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
                 foreach(DessertMenu.dessertItem dessert in dessertMenuCart)
                 {
-                    dessertCheckList.Items.Add(dessert.dessertName + " $" + dessert.dessertPrice);
+                    dessertCheckList.Items.Add(dessert.dessertName + "\t\t\t\t$" + dessert.dessertPrice);
                 }
             }
             else
@@ -64,6 +64,56 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             }
         }
 
+        private void cartDelete()
+        {
+            for(int i = foodCheckList.SelectedIndices.Count - 1; i >= 0; --i)
+            {
+                foodCheckList.Items.RemoveAt(foodCheckList.SelectedIndices[i]);
+                foodMenuCart.RemoveAt(i);
+
+                if(foodMenuCart.Count == 0)
+                {
+                    foodCartLabel.Text = "No Food Added";
+                }
+            }
+
+            for(int i = drinkCheckList.SelectedIndices.Count -1; i >= 0; --i)
+            {
+                drinkCheckList.Items.RemoveAt(drinkCheckList.SelectedIndices[i]);
+                drinkMenuCart.RemoveAt(i);
+
+                if(drinkMenuCart.Count == 0)
+                {
+                    drinkCartLabel.Text = "No Drinks Added";
+                }
+            }
+
+            for(int i = dessertCheckList.SelectedIndices.Count -1; i >= 0; --i)
+            {
+                dessertCheckList.Items.RemoveAt(dessertCheckList.SelectedIndices[i]);
+                dessertMenuCart.RemoveAt(i);
+
+                if (drinkMenuCart.Count == 0)
+                {
+                    dessertCartLabel.Text = "No Desserts Added";
+                }
+            }
+
+            if(foodCheckList.Items.Count == 0 && drinkCheckList.Items.Count == 0 && dessertCheckList.Items.Count == 0)
+            {
+                deleteButton.Hide();
+                checkOutButton.Hide();
+            }
+        }
+
+        private void cartCheckOut()
+        {
+
+            this.Hide();
+            CheckOut checkOut = new CheckOut(); ;
+            checkOut.ShowDialog();
+            this.Show();
+        }
 
         public shoppingCart()
         {
@@ -71,12 +121,15 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
             cartGet();
 
-            if(foodMenuCart.Count > 0 || drinkMenuCart.Count > 0 || dessertMenuCart.Count > 0)
+            if (foodMenuCart.Count > 0 || drinkMenuCart.Count > 0 || dessertMenuCart.Count > 0)
             {
                 deleteButton.Show();
-            }else
+                checkOutButton.Show();
+            }
+            else
             {
                 deleteButton.Hide();
+                checkOutButton.Hide();
             }
         }
 
@@ -87,31 +140,15 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            for(int a = foodCheckList.Items.Count - 1; a >= 0; a--)
-            {
-                if (foodCheckList.GetItemChecked(a))
-                {
-                    foodCheckList.Items.RemoveAt(foodCheckList.CheckedIndices[a]);
-                    foodMenuCart.RemoveAt(a);
-                }
-            }
+            cartDelete();
+        }
 
-            for (int a = drinkCheckList.Items.Count - 1; a >= 0; a--)
+        private void checkOutButton_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("Are you ready to check out?", "Check Out", MessageBoxButtons.YesNo);
+            if(confirmResult == DialogResult.Yes)
             {
-                if (drinkCheckList.GetItemChecked(a))
-                {
-                    drinkCheckList.Items.RemoveAt(drinkCheckList.CheckedIndices[a]);
-                    drinkMenuCart.RemoveAt(a);
-                }
-            }
-
-            for (int a = dessertCheckList.Items.Count - 1; a >= 0; a--)
-            {
-                if (dessertCheckList.GetItemChecked(a))
-                {
-                    dessertCheckList.Items.RemoveAt(dessertCheckList.CheckedIndices[a]);
-                    dessertMenuCart.RemoveAt(a);
-                }
+                cartCheckOut();
             }
         }
     }
