@@ -18,8 +18,6 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
         decimal grandTotal;
 
-        public static bool pay;
-
         private void checkout()
         {
             if (shoppingCart.foodMenuCart.Count > 0)
@@ -91,8 +89,6 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         public CheckOut()
         {
             InitializeComponent();
-
-            pay = false;
 
             checkout();
 

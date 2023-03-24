@@ -66,20 +66,24 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
         private void cartDelete()
         {
-            for(int i = foodCheckList.SelectedIndices.Count - 1; i >= 0; --i)
+            var foodCheckedItem = foodCheckList.CheckedIndices;
+            var drinkCheckedItem = drinkCheckList.CheckedIndices;
+            var dessertCheckedItem = dessertCheckList.CheckedIndices;
+
+            for (int i = foodCheckedItem.Count; i > 0;)
             {
-                foodCheckList.Items.RemoveAt(foodCheckList.SelectedIndices[i]);
+                foodCheckList.Items.RemoveAt(foodCheckedItem[--i]);
                 foodMenuCart.RemoveAt(i);
 
-                if(foodMenuCart.Count == 0)
+                if (foodMenuCart.Count == 0)
                 {
                     foodCartLabel.Text = "No Food Added";
                 }
             }
 
-            for(int i = drinkCheckList.SelectedIndices.Count -1; i >= 0; --i)
+            for(int i = drinkCheckedItem.Count; i > 0;)
             {
-                drinkCheckList.Items.RemoveAt(drinkCheckList.SelectedIndices[i]);
+                drinkCheckList.Items.Remove(drinkCheckedItem[--i]);
                 drinkMenuCart.RemoveAt(i);
 
                 if(drinkMenuCart.Count == 0)
@@ -88,18 +92,18 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                 }
             }
 
-            for(int i = dessertCheckList.SelectedIndices.Count -1; i >= 0; --i)
+            for (int i = dessertCheckedItem.Count; i > 0;)
             {
-                dessertCheckList.Items.RemoveAt(dessertCheckList.SelectedIndices[i]);
+                dessertCheckList.Items.Remove(dessertCheckedItem[--i]);
                 dessertMenuCart.RemoveAt(i);
 
-                if (drinkMenuCart.Count == 0)
+                if (dessertMenuCart.Count == 0)
                 {
                     dessertCartLabel.Text = "No Desserts Added";
                 }
             }
 
-            if(foodCheckList.Items.Count == 0 && drinkCheckList.Items.Count == 0 && dessertCheckList.Items.Count == 0)
+            if (foodCheckList.Items.Count == 0 && drinkCheckList.Items.Count == 0 && dessertCheckList.Items.Count == 0)
             {
                 deleteButton.Hide();
                 checkOutButton.Hide();
@@ -149,7 +153,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             if(confirmResult == DialogResult.Yes)
             {
                 cartCheckOut();
-                this.Close();
+                this.Hide();
             }
         }
     }
