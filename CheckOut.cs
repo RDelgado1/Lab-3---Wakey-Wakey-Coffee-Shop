@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,11 +21,11 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
         private void checkout()
         {
-            if (shoppingCart.foodMenuCart.Count > 0)
+            if (ShoppingCart.foodMenuCart.Count > 0)
             {
                 checkOutFoodLabel.Text = "Your Food";
 
-                foreach (FoodMenu.foodItem food in shoppingCart.foodMenuCart)
+                foreach (FoodMenu.foodItem food in ShoppingCart.foodMenuCart)
                 {
                     foodListView.Items.Add(food.foodName + " \t\t$" + food.foodPrice);
                 }
@@ -35,11 +36,11 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                 foodListView.Hide();
             }
 
-            if (shoppingCart.drinkMenuCart.Count > 0)
+            if (ShoppingCart.drinkMenuCart.Count > 0)
             {
                 checkOutDrinkLabel.Text = "Your Drinks";
 
-                foreach (DrinksMenu.drinkItem drink in shoppingCart.drinkMenuCart)
+                foreach (DrinksMenu.drinkItem drink in ShoppingCart.drinkMenuCart)
                 {
                     drinkListView.Items.Add(drink.drinkName + " \t\t$" + drink.drinkPrice);
                 }
@@ -50,11 +51,11 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                 drinkListView.Hide();
             }
 
-            if (shoppingCart.dessertMenuCart.Count > 0)
+            if (ShoppingCart.dessertMenuCart.Count > 0)
             {
                 checkoutDessertLabel.Text = "Your Desserts";
 
-                foreach (DessertMenu.dessertItem dessert in shoppingCart.dessertMenuCart)
+                foreach (DessertMenu.dessertItem dessert in ShoppingCart.dessertMenuCart)
                 {
                     dessertListView.Items.Add(dessert.dessertName + " \t\t$" + dessert.dessertPrice);
                 }
@@ -68,22 +69,30 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
         private void totalGet()
         {
-            foreach (FoodMenu.foodItem food in shoppingCart.foodMenuCart)
+            foreach (FoodMenu.foodItem food in ShoppingCart.foodMenuCart)
             {
                 foodTotal += food.foodPrice;
             }
 
-            foreach (DrinksMenu.drinkItem drink in shoppingCart.drinkMenuCart)
+            foreach (DrinksMenu.drinkItem drink in ShoppingCart.drinkMenuCart)
             {
                 drinkTotal += drink.drinkPrice;
             }
 
-            foreach (DessertMenu.dessertItem dessert in shoppingCart.dessertMenuCart)
+            foreach (DessertMenu.dessertItem dessert in ShoppingCart.dessertMenuCart)
             {
                 dessertTotal += dessert.dessertPrice;
             }
 
             grandTotal = foodTotal + drinkTotal + dessertTotal;
+        }
+
+        private void pay()
+        {
+            this.Hide();
+            OrderProcessing newOrder = new OrderProcessing(); ;
+            newOrder.ShowDialog();
+            this.Show();
         }
 
         public CheckOut()
@@ -108,16 +117,18 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         {
             Console.WriteLine("paying now");
 
+            pay();
+
             var confirmResult = MessageBox.Show("Order was successfully made", "Order Check Out", MessageBoxButtons.OK);
 
             if (confirmResult == DialogResult.OK)
             {
 
-                shoppingCart.foodMenuCart.Clear();
-                shoppingCart.drinkMenuCart.Clear();
-                shoppingCart.dessertMenuCart.Clear();
+                ShoppingCart.foodMenuCart.Clear();
+                ShoppingCart.drinkMenuCart.Clear();
+                ShoppingCart.dessertMenuCart.Clear();
 
-                Console.WriteLine(shoppingCart.foodMenuCart.Count);
+                Console.WriteLine(ShoppingCart.foodMenuCart.Count);
 
                 this.Close();
             }

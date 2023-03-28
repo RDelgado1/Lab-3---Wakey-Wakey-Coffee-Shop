@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Lab_3___Wakey_Wakey_Coffee_Shop
 {
-    public partial class shoppingCart : Form
+    public partial class ShoppingCart : Form
     {
         public static List<FoodMenu.foodItem> foodMenuCart = new List<FoodMenu.foodItem>();
         public static List<DrinksMenu.drinkItem> drinkMenuCart = new List<DrinksMenu.drinkItem>();
@@ -119,7 +119,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.Show();
         }
 
-        public shoppingCart()
+        public ShoppingCart()
         {
             InitializeComponent();
 

@@ -48,8 +48,16 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         private void cartButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            shoppingCart cart = new shoppingCart();
+            ShoppingCart cart = new ShoppingCart();
             cart.ShowDialog();
+            this.Show();
+        }
+
+        private void orderLookUp_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OrderLookUp lookUp = new OrderLookUp();
+            lookUp.ShowDialog();
             this.Show();
         }
     }

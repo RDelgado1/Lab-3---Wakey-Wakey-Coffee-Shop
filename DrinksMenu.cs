@@ -39,7 +39,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
             try
             {
-                string sql = "SELECT id, drinkName, drinkPrice FROM drinkmenu where id = " + id;
+                string sql = "SELECT id, name, price FROM menu where id = " + id;
                 conn = new MySqlConnection(connection_string);
                 cmd = new MySqlCommand(sql, conn);
 
@@ -51,8 +51,8 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                 {
                     //foodItem.id = reader.GetInt32("id");
                     drinkCart.id = reader.GetInt32("id");
-                    drinkCart.drinkName = reader.GetString("drinkName");
-                    drinkCart.drinkPrice = reader.GetDecimal("drinkPrice");
+                    drinkCart.drinkName = reader.GetString("name");
+                    drinkCart.drinkPrice = reader.GetDecimal("price");
                     drinkCart.drinkStock = 1;
                 }
             }
@@ -67,7 +67,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             }
 
             //Console.WriteLine(burgerLabel.Text + " was added to cart");
-            shoppingCart.drinkMenuCart.Add(drinkCart);
+            ShoppingCart.drinkMenuCart.Add(drinkCart);
 
             var burgerConfirm = MessageBox.Show(drinkCart.drinkName + " was added to your cart!", "Success!", MessageBoxButtons.OK);
         }
@@ -89,7 +89,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
             if (confirmResult == DialogResult.Yes)
             {
-                drinkGet(1);
+                drinkGet(4);
             }
         }
 
@@ -99,7 +99,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
             if (confirmResult == DialogResult.Yes)
             {
-                drinkGet(2);
+                drinkGet(5);
             }
         }
 
@@ -109,7 +109,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
             if (confirmResult == DialogResult.Yes)
             {
-                drinkGet(3);
+                drinkGet(6);
             }
         }
     }

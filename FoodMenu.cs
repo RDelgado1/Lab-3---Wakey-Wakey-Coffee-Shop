@@ -39,7 +39,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
             try
             {
-                string sql = "SELECT id, foodName, foodPrice FROM foodMenu where id = " + id;
+                string sql = "SELECT id, name, price FROM menu where id = " + id;
                 conn = new MySqlConnection(connection_string);
                 cmd = new MySqlCommand(sql, conn);
 
@@ -51,8 +51,8 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                 {
                     //foodItem.id = reader.GetInt32("id");
                     foodCart.id = reader.GetInt32("id");
-                    foodCart.foodName = reader.GetString("foodName");
-                    foodCart.foodPrice = reader.GetDecimal("foodPrice");
+                    foodCart.foodName = reader.GetString("name");
+                    foodCart.foodPrice = reader.GetDecimal("price");
                     foodCart.foodCount = 1;
                 }
             }
@@ -67,7 +67,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             }
 
             //Console.WriteLine(burgerLabel.Text + " was added to cart");
-            shoppingCart.foodMenuCart.Add(foodCart);
+            ShoppingCart.foodMenuCart.Add(foodCart);
 
             var burgerConfirm = MessageBox.Show(foodCart.foodName + " was added to your cart!", "Success!", MessageBoxButtons.OK);
     }

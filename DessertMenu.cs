@@ -39,7 +39,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
             try
             {
-                string sql = "SELECT id, dessertName, dessertPrice FROM dessertmenu where id = " + id;
+                string sql = "SELECT id, name, price FROM menu where id = " + id;
                 conn = new MySqlConnection(connection_string);
                 cmd = new MySqlCommand(sql, conn);
 
@@ -51,8 +51,8 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                 {
                     //foodItem.id = reader.GetInt32("id");
                     dessertCart.id = reader.GetInt32("id");
-                    dessertCart.dessertName = reader.GetString("dessertName");
-                    dessertCart.dessertPrice = reader.GetDecimal("dessertPrice");
+                    dessertCart.dessertName = reader.GetString("name");
+                    dessertCart.dessertPrice = reader.GetDecimal("price");
                     dessertCart.dessertStock = 1;
                 }
             }
@@ -67,7 +67,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             }
 
             //Console.WriteLine(burgerLabel.Text + " was added to cart");
-            shoppingCart.dessertMenuCart.Add(dessertCart);
+            ShoppingCart.dessertMenuCart.Add(dessertCart);
 
             var burgerConfirm = MessageBox.Show(dessertCart.dessertName + " was added to your cart!", "Success!", MessageBoxButtons.OK);
         }
@@ -88,7 +88,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
             if (confirmResult == DialogResult.Yes)
             {
-                dessertGet(1);
+                dessertGet(7);
             }
         }
 
@@ -98,7 +98,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
             if (confirmResult == DialogResult.Yes)
             {
-                dessertGet(2);
+                dessertGet(8);
             }
         }
     }

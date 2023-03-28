@@ -114,11 +114,23 @@
     <Compile Include="FoodMenu.Designer.cs">
       <DependentUpon>FoodMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderLookUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderLookUp.Designer.cs">
+      <DependentUpon>OrderLookUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderProcessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderProcessing.Designer.cs">
+      <DependentUpon>OrderProcessing.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,11 +139,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="shoppingCart.cs">
+    <Compile Include="ShoppingCart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="shoppingCart.Designer.cs">
-      <DependentUpon>shoppingCart.cs</DependentUpon>
+    <Compile Include="ShoppingCart.Designer.cs">
+      <DependentUpon>ShoppingCart.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CheckOut.resx">
       <DependentUpon>CheckOut.cs</DependentUpon>
@@ -145,16 +157,22 @@
     <EmbeddedResource Include="FoodMenu.resx">
       <DependentUpon>FoodMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderLookUp.resx">
+      <DependentUpon>OrderLookUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderProcessing.resx">
+      <DependentUpon>OrderProcessing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="shoppingCart.resx">
-      <DependentUpon>shoppingCart.cs</DependentUpon>
+    <EmbeddedResource Include="ShoppingCart.resx">
+      <DependentUpon>ShoppingCart.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
