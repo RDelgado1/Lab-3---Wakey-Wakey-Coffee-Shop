@@ -17,7 +17,9 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         decimal drinkTotal;
         decimal dessertTotal;
 
-        decimal grandTotal;
+        public decimal grandTotal;
+
+        public bool payBool;
 
         private void checkout()
         {
@@ -103,7 +105,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
             totalGet();
 
-            Console.WriteLine(grandTotal);
+            //Console.WriteLine(grandTotal);
 
             totalValue.Text = grandTotal.ToString();
         }
@@ -115,23 +117,31 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
         private void payButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("paying now");
+            //Console.WriteLine("paying now");
 
             pay();
+            this.Close();
 
-            var confirmResult = MessageBox.Show("Order was successfully made", "Order Check Out", MessageBoxButtons.OK);
 
-            if (confirmResult == DialogResult.OK)
-            {
+            //if (payBool == true)
+            //{
 
-                ShoppingCart.foodMenuCart.Clear();
-                ShoppingCart.drinkMenuCart.Clear();
-                ShoppingCart.dessertMenuCart.Clear();
+            //    Console.WriteLine("true");
+            //    var confirmResult = MessageBox.Show("Order was successfully made", "Order Check Out", MessageBoxButtons.OK);
 
-                Console.WriteLine(ShoppingCart.foodMenuCart.Count);
 
-                this.Close();
-            }
+            //    if (confirmResult == DialogResult.OK)
+            //    {
+
+            //        ShoppingCart.foodMenuCart.Clear();
+            //        ShoppingCart.drinkMenuCart.Clear();
+            //        ShoppingCart.dessertMenuCart.Clear();
+
+            //        Console.WriteLine(ShoppingCart.foodMenuCart.Count);
+
+            //        this.Close();
+            //    }
+            //}
         }
     }
 }

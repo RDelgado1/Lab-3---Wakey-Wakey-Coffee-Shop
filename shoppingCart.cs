@@ -16,6 +16,8 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         public static List<DrinksMenu.drinkItem> drinkMenuCart = new List<DrinksMenu.drinkItem>();
         public static List<DessertMenu.dessertItem> dessertMenuCart = new List<DessertMenu.dessertItem>();
 
+        public int totalMenu = foodMenuCart.Count + drinkMenuCart.Count + dessertMenuCart.Count;
+
         private void cartGet()
         {
             if (foodMenuCart.Count > 0)

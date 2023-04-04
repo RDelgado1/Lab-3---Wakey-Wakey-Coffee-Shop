@@ -81,17 +81,17 @@
             this.tableLayoutPanel2.Controls.Add(this.cancelCheckout, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 746);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 743);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1651, 106);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1651, 109);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // payButton
             // 
             this.payButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.payButton.Location = new System.Drawing.Point(1483, 38);
+            this.payButton.Location = new System.Drawing.Point(1483, 41);
             this.payButton.Name = "payButton";
             this.payButton.Size = new System.Drawing.Size(165, 65);
             this.payButton.TabIndex = 0;
@@ -102,7 +102,7 @@
             // cancelCheckout
             // 
             this.cancelCheckout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cancelCheckout.Location = new System.Drawing.Point(3, 38);
+            this.cancelCheckout.Location = new System.Drawing.Point(3, 41);
             this.cancelCheckout.Name = "cancelCheckout";
             this.cancelCheckout.Size = new System.Drawing.Size(165, 65);
             this.cancelCheckout.TabIndex = 1;
@@ -122,7 +122,7 @@
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(544, 100);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(544, 103);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // totalLabel
@@ -141,9 +141,9 @@
             this.totalValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.totalValue.AutoSize = true;
             this.totalValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalValue.Location = new System.Drawing.Point(217, 50);
+            this.totalValue.Location = new System.Drawing.Point(217, 51);
             this.totalValue.Name = "totalValue";
-            this.totalValue.Size = new System.Drawing.Size(109, 50);
+            this.totalValue.Size = new System.Drawing.Size(109, 52);
             this.totalValue.TabIndex = 1;
             this.totalValue.Text = "label1";
             // 
@@ -159,7 +159,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1651, 241);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1651, 240);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // checkOutFoodLabel
@@ -179,7 +179,7 @@
             this.foodListView.HideSelection = false;
             this.foodListView.Location = new System.Drawing.Point(3, 66);
             this.foodListView.Name = "foodListView";
-            this.foodListView.Size = new System.Drawing.Size(1645, 172);
+            this.foodListView.Size = new System.Drawing.Size(1645, 171);
             this.foodListView.TabIndex = 1;
             this.foodListView.UseCompatibleStateImageBehavior = false;
             this.foodListView.View = System.Windows.Forms.View.List;
@@ -191,12 +191,12 @@
             this.tableLayoutPanel4.Controls.Add(this.checkOutDrinkLabel, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.drinkListView, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 250);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 249);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1651, 242);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1651, 241);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // checkOutDrinkLabel
@@ -216,7 +216,7 @@
             this.drinkListView.HideSelection = false;
             this.drinkListView.Location = new System.Drawing.Point(3, 66);
             this.drinkListView.Name = "drinkListView";
-            this.drinkListView.Size = new System.Drawing.Size(1645, 173);
+            this.drinkListView.Size = new System.Drawing.Size(1645, 172);
             this.drinkListView.TabIndex = 1;
             this.drinkListView.UseCompatibleStateImageBehavior = false;
             this.drinkListView.View = System.Windows.Forms.View.List;
@@ -228,12 +228,12 @@
             this.tableLayoutPanel5.Controls.Add(this.checkoutDessertLabel, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.dessertListView, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 498);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 496);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1651, 242);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1651, 241);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // checkoutDessertLabel
@@ -253,7 +253,7 @@
             this.dessertListView.HideSelection = false;
             this.dessertListView.Location = new System.Drawing.Point(3, 66);
             this.dessertListView.Name = "dessertListView";
-            this.dessertListView.Size = new System.Drawing.Size(1645, 173);
+            this.dessertListView.Size = new System.Drawing.Size(1645, 172);
             this.dessertListView.TabIndex = 1;
             this.dessertListView.UseCompatibleStateImageBehavior = false;
             this.dessertListView.View = System.Windows.Forms.View.List;
