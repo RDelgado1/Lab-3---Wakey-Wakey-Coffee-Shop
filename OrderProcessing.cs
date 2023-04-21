@@ -153,7 +153,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                     }
                 }
             }
-            else if(string.IsNullOrEmpty(firstNameTextBox.Text) && string.IsNullOrEmpty(lastNameTextBox.Text))
+            else if(string.IsNullOrEmpty(firstNameTextBox.Text) && string.IsNullOrEmpty(lastNameTextBox.Text) && string.IsNullOrEmpty(emailTextBox.Text))
             {
                 var confirmResult = MessageBox.Show("Please Fill Out the Required Information", "New Order", MessageBoxButtons.OK);
             }

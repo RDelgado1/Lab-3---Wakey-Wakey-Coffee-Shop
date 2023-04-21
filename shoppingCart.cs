@@ -81,28 +81,32 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                 {
                     foodCartLabel.Text = "No Food Added";
                 }
+
+               // this.Refresh();
             }
 
             for(int i = drinkCheckedItem.Count; i > 0;)
             {
-                drinkCheckList.Items.Remove(drinkCheckedItem[--i]);
+                drinkCheckList.Items.RemoveAt(drinkCheckedItem[--i]);
                 drinkMenuCart.RemoveAt(i);
 
                 if(drinkMenuCart.Count == 0)
                 {
                     drinkCartLabel.Text = "No Drinks Added";
                 }
+               // this.Refresh();
             }
 
             for (int i = dessertCheckedItem.Count; i > 0;)
             {
-                dessertCheckList.Items.Remove(dessertCheckedItem[--i]);
+                dessertCheckList.Items.RemoveAt(dessertCheckedItem[--i]);
                 dessertMenuCart.RemoveAt(i);
 
                 if (dessertMenuCart.Count == 0)
                 {
                     dessertCartLabel.Text = "No Desserts Added";
                 }
+                //this.Refresh();
             }
 
             if (foodCheckList.Items.Count == 0 && drinkCheckList.Items.Count == 0 && dessertCheckList.Items.Count == 0)
@@ -147,6 +151,8 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         private void deleteButton_Click(object sender, EventArgs e)
         {
             cartDelete();
+
+            this.Refresh();
         }
 
         private void checkOutButton_Click(object sender, EventArgs e)
