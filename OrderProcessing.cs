@@ -1,5 +1,7 @@
 ﻿using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Relational;
+using Org.BouncyCastle.Asn1.X509;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,30 +39,33 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         string custLastName;
         string custEmail;
 
-        private void newOrder()
+        int IDNum, orderNum;
+        int orderNumDisplay;
+      
+        private void newOrder(int orNum)
         {
+            orderNumDisplay = orNum;
             flag.payBool = true;
-
-            int orderNum = rnd.Next(0, 1000000);
-            
 
             try
             {
                 string placedOrderSQL = "INSERT INTO placedorders (placedOrder_number, placedOrder_date, placedOrder_amount, prod_count)" +
                 " VALUES (@placedOrder_number, @placedOrder_date, @placedOrder_amount, @prod_count)";
 
+
                 conn = new MySqlConnection(connection_string);
                 cmd = new MySqlCommand(placedOrderSQL, conn);
 
                 conn.Open();
 
-                cmd.Parameters.AddWithValue("@placedOrder_number", orderNum);
+                cmd.Parameters.AddWithValue("@placedOrder_number", orNum);
                 cmd.Parameters.AddWithValue("@placedOrder_Date", date);
                 cmd.Parameters.AddWithValue("@placedOrder_amount", tot.grandTotal);
                 cmd.Parameters.AddWithValue("@prod_count", count.totalMenu);
 
                 cmd.ExecuteNonQuery();
 
+                //flag.payBool = true;
 
             }
             catch (Exception ex)
@@ -73,12 +78,43 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                 if (conn != null) conn.Close();
             }
 
-            newGuest(orderNum);
+            try
+            {
+                IDNum = rnd.Next(0,1000000);
+
+                string placedOrderSQL = "SELECT COUNT(*) FROM guest where id = " + IDNum;
+
+
+                conn = new MySqlConnection(connection_string);
+                cmd = new MySqlCommand(placedOrderSQL, conn);
+
+                conn.Open();
+
+                int idCheck = Convert.ToInt32(cmd.ExecuteScalar());
+
+                Console.WriteLine(count);
+
+                if (idCheck > 0)
+                {
+                    IDNum = rnd.Next(0, 1000000);
+                    Console.WriteLine(IDNum);
+                }
+
+                newGuest(orderNum);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(string.Format("An error occurred {0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (reader != null) reader.Close();
+                if (conn != null) conn.Close();
+            }
         }
 
         private void newGuest(int order)
         {
-            int IDNum = rnd.Next(0, 500);
             try
             {
                 string guestSQL = "INSERT INTO guest (id, first_name, last_name, email, placedOrder_num)" +
@@ -125,32 +161,65 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             custLastName = lastNameTextBox.Text;
             custEmail = emailTextBox.Text;
 
+            int count;
+
+            orderNum = rnd.Next(0, 1000000);
+
             if (!string.IsNullOrEmpty(custFirstName) && !string.IsNullOrEmpty(custLastName) && !string.IsNullOrEmpty(custEmail))
             {
-                Console.WriteLine(firstNameTextBox.Text + " " + " " + lastNameTextBox.Text);
+                //Console.WriteLine(firstNameTextBox.Text + " " + " " + lastNameTextBox.Text);
 
                 firstNameTextBox.Text = string.Empty;
                 lastNameTextBox.Text = string.Empty;
                 emailTextBox.Text = string.Empty;
 
-                newOrder();
-
-                if (flag.payBool == true)
+                try
                 {
-                    var confirmResult = MessageBox.Show("Order was successfully made", "New Order", MessageBoxButtons.OK);
+                    string searchOrderNum = "SELECT COUNT(*) FROM placedorders where placedOrder_number = " + orderNum;
 
+                    conn = new MySqlConnection(connection_string);
+                    cmd = new MySqlCommand(searchOrderNum, conn);
 
-                    if (confirmResult == DialogResult.OK)
+                    conn.Open();
+
+                    count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    Console.WriteLine(count);
+
+                    if(count > 0)
                     {
-
-                        ShoppingCart.foodMenuCart.Clear();
-                        ShoppingCart.drinkMenuCart.Clear();
-                        ShoppingCart.dessertMenuCart.Clear();
-
-                        Console.WriteLine(ShoppingCart.foodMenuCart.Count);
-
-                        this.Close();
+                        orderNum = rnd.Next(0, 1000000);
+                        Console.WriteLine(orderNum);
                     }
+                    
+                    newOrder(orderNum);
+
+                    if (flag.payBool == true)
+                    {
+                        var confirmResult = MessageBox.Show("Order # " + orderNumDisplay + " was successfully made", "New Order", MessageBoxButtons.OK);
+
+
+                        if (confirmResult == DialogResult.OK)
+                        {
+
+                            ShoppingCart.foodMenuCart.Clear();
+                            ShoppingCart.drinkMenuCart.Clear();
+                            ShoppingCart.dessertMenuCart.Clear();
+
+                            Console.WriteLine(ShoppingCart.foodMenuCart.Count);
+
+                            this.Close();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(string.Format("An error occurred {0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    if (reader != null) reader.Close();
+                    if (conn != null) conn.Close();
                 }
             }
             else if(string.IsNullOrEmpty(firstNameTextBox.Text) && string.IsNullOrEmpty(lastNameTextBox.Text) && string.IsNullOrEmpty(emailTextBox.Text))

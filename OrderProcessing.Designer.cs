@@ -42,6 +42,9 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.emailLabel = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -56,17 +59,18 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1600, 865);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(737, 448);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -76,13 +80,13 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.newOrderTitle, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1592, 245);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(733, 126);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -95,62 +99,58 @@
             this.tableLayoutPanel3.Controls.Add(this.lastNameLabel, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.lastNameTextBox, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 80);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 41);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1584, 161);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(729, 83);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // firstNameLabel
             // 
             this.firstNameLabel.AutoSize = true;
             this.firstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameLabel.Location = new System.Drawing.Point(6, 0);
-            this.firstNameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.firstNameLabel.Location = new System.Drawing.Point(3, 0);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(225, 46);
+            this.firstNameLabel.Size = new System.Drawing.Size(112, 25);
             this.firstNameLabel.TabIndex = 0;
             this.firstNameLabel.Text = "First Name:";
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(798, 6);
-            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.firstNameTextBox.Location = new System.Drawing.Point(367, 3);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(496, 31);
+            this.firstNameTextBox.Size = new System.Drawing.Size(250, 20);
             this.firstNameTextBox.TabIndex = 1;
             // 
             // lastNameLabel
             // 
             this.lastNameLabel.AutoSize = true;
             this.lastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameLabel.Location = new System.Drawing.Point(6, 80);
-            this.lastNameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lastNameLabel.Location = new System.Drawing.Point(3, 41);
             this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(223, 46);
+            this.lastNameLabel.Size = new System.Drawing.Size(112, 25);
             this.lastNameLabel.TabIndex = 2;
             this.lastNameLabel.Text = "Last Name:";
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(798, 86);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.lastNameTextBox.Location = new System.Drawing.Point(367, 44);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(496, 31);
+            this.lastNameTextBox.Size = new System.Drawing.Size(250, 20);
             this.lastNameTextBox.TabIndex = 3;
             // 
             // newOrderTitle
             // 
             this.newOrderTitle.AutoSize = true;
             this.newOrderTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newOrderTitle.Location = new System.Drawing.Point(4, 0);
-            this.newOrderTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.newOrderTitle.Location = new System.Drawing.Point(2, 0);
+            this.newOrderTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.newOrderTitle.Name = "newOrderTitle";
-            this.newOrderTitle.Size = new System.Drawing.Size(353, 76);
+            this.newOrderTitle.Size = new System.Drawing.Size(181, 39);
             this.newOrderTitle.TabIndex = 0;
             this.newOrderTitle.Text = "New Order";
             // 
@@ -163,21 +163,20 @@
             this.tableLayoutPanel4.Controls.Add(this.oderProcessingCancelButton, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.orderSubmitButton, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(6, 765);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(6);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 395);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1588, 94);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(731, 50);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // oderProcessingCancelButton
             // 
             this.oderProcessingCancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.oderProcessingCancelButton.Location = new System.Drawing.Point(4, 30);
-            this.oderProcessingCancelButton.Margin = new System.Windows.Forms.Padding(4);
+            this.oderProcessingCancelButton.Location = new System.Drawing.Point(2, 17);
+            this.oderProcessingCancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.oderProcessingCancelButton.Name = "oderProcessingCancelButton";
-            this.oderProcessingCancelButton.Size = new System.Drawing.Size(124, 60);
+            this.oderProcessingCancelButton.Size = new System.Drawing.Size(62, 31);
             this.oderProcessingCancelButton.TabIndex = 0;
             this.oderProcessingCancelButton.Text = "Cancel";
             this.oderProcessingCancelButton.UseVisualStyleBackColor = true;
@@ -186,9 +185,10 @@
             // orderSubmitButton
             // 
             this.orderSubmitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.orderSubmitButton.Location = new System.Drawing.Point(1461, 31);
+            this.orderSubmitButton.Location = new System.Drawing.Point(667, 17);
+            this.orderSubmitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.orderSubmitButton.Name = "orderSubmitButton";
-            this.orderSubmitButton.Size = new System.Drawing.Size(124, 60);
+            this.orderSubmitButton.Size = new System.Drawing.Size(62, 31);
             this.orderSubmitButton.TabIndex = 1;
             this.orderSubmitButton.Text = "Submit";
             this.orderSubmitButton.UseVisualStyleBackColor = true;
@@ -201,39 +201,73 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.emailLabel, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.emailTextBox, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.addressLabel, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.textBox1, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 256);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 132);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1594, 247);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(733, 127);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
             this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailLabel.Location = new System.Drawing.Point(3, 0);
+            this.emailLabel.Location = new System.Drawing.Point(2, 0);
+            this.emailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(131, 46);
+            this.emailLabel.Size = new System.Drawing.Size(66, 25);
             this.emailLabel.TabIndex = 0;
             this.emailLabel.Text = "Email:";
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(800, 3);
+            this.emailTextBox.Location = new System.Drawing.Point(368, 2);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(496, 31);
+            this.emailTextBox.Size = new System.Drawing.Size(250, 20);
             this.emailTextBox.TabIndex = 1;
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLabel.Location = new System.Drawing.Point(3, 63);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(91, 25);
+            this.addressLabel.TabIndex = 2;
+            this.addressLabel.Text = "Address:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(369, 66);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 264);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel6.TabIndex = 4;
             // 
             // OrderProcessing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.ClientSize = new System.Drawing.Size(737, 448);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "OrderProcessing";
             this.Text = "OrderProcessing";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -264,5 +298,8 @@
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Button orderSubmitButton;
+        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
     }
 }
