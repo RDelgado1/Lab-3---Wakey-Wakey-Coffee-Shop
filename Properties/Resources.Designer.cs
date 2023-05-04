@@ -19,7 +19,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,6 +63,36 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap beerDrinkMenu {
+            get {
+                object obj = ResourceManager.GetObject("beerDrinkMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap burgerFoodMenu {
+            get {
+                object obj = ResourceManager.GetObject("burgerFoodMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cakeDessertMenu {
+            get {
+                object obj = ResourceManager.GetObject("cakeDessertMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dessertMenuPhoto {
             get {
                 object obj = ResourceManager.GetObject("dessertMenuPhoto", resourceCulture);
@@ -86,6 +116,56 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop.Properties {
         internal static System.Drawing.Bitmap foodMenuPhoto {
             get {
                 object obj = ResourceManager.GetObject("foodMenuPhoto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pizzaFoodMenu {
+            get {
+                object obj = ResourceManager.GetObject("pizzaFoodMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap saladFoodMenu {
+            get {
+                object obj = ResourceManager.GetObject("saladFoodMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sodaDrinkMenu {
+            get {
+                object obj = ResourceManager.GetObject("sodaDrinkMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap souffleDessertMenu {
+            get {
+                object obj = ResourceManager.GetObject("souffleDessertMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap waterDrinkMenu {
+            get {
+                object obj = ResourceManager.GetObject("waterDrinkMenu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

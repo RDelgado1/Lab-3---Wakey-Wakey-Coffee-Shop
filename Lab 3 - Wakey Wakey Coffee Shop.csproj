@@ -197,5 +197,29 @@
   <ItemGroup>
     <None Include="Resources\dessertMenuPhoto.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BN-NJ737_burger_M_20160404133910.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5218c6_6450b4193d1f4285b0782bb4d1d90dce~mv2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salad_platter02_crop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\528988543557.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\water-quality-banner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner-buying-guide-beer-glassware-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a-slice-of-cake-and-ice-cream.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\064bd8d6006c46529ec729cf45cd335e.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

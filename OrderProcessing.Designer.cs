@@ -43,13 +43,30 @@
             this.emailLabel = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.addressLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.cityLabel = new System.Windows.Forms.Label();
+            this.cityTextBox = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.stateLabel = new System.Windows.Forms.Label();
+            this.stateTextBox = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.zipCodeLabel = new System.Windows.Forms.Label();
+            this.zipCodeTextBox = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.deliveryRadioButton = new System.Windows.Forms.RadioButton();
+            this.pickupRadioButton = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -62,7 +79,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -81,7 +98,7 @@
             this.tableLayoutPanel2.Controls.Add(this.newOrderTitle, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -100,7 +117,7 @@
             this.tableLayoutPanel3.Controls.Add(this.lastNameTextBox, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 41);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -163,18 +180,18 @@
             this.tableLayoutPanel4.Controls.Add(this.oderProcessingCancelButton, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.orderSubmitButton, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 395);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 393);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(731, 50);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(731, 52);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // oderProcessingCancelButton
             // 
             this.oderProcessingCancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.oderProcessingCancelButton.Location = new System.Drawing.Point(2, 17);
-            this.oderProcessingCancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.oderProcessingCancelButton.Location = new System.Drawing.Point(2, 19);
+            this.oderProcessingCancelButton.Margin = new System.Windows.Forms.Padding(2);
             this.oderProcessingCancelButton.Name = "oderProcessingCancelButton";
             this.oderProcessingCancelButton.Size = new System.Drawing.Size(62, 31);
             this.oderProcessingCancelButton.TabIndex = 0;
@@ -185,8 +202,8 @@
             // orderSubmitButton
             // 
             this.orderSubmitButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.orderSubmitButton.Location = new System.Drawing.Point(667, 17);
-            this.orderSubmitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.orderSubmitButton.Location = new System.Drawing.Point(667, 19);
+            this.orderSubmitButton.Margin = new System.Windows.Forms.Padding(2);
             this.orderSubmitButton.Name = "orderSubmitButton";
             this.orderSubmitButton.Size = new System.Drawing.Size(62, 31);
             this.orderSubmitButton.TabIndex = 1;
@@ -202,15 +219,15 @@
             this.tableLayoutPanel5.Controls.Add(this.emailLabel, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.emailTextBox, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.addressLabel, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.textBox1, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.addressTextBox, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 132);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(733, 127);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(733, 126);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // emailLabel
@@ -227,7 +244,7 @@
             // emailTextBox
             // 
             this.emailTextBox.Location = new System.Drawing.Point(368, 2);
-            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(250, 20);
             this.emailTextBox.TabIndex = 1;
@@ -242,25 +259,169 @@
             this.addressLabel.TabIndex = 2;
             this.addressLabel.Text = "Address:";
             // 
-            // textBox1
+            // addressTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(369, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 20);
-            this.textBox1.TabIndex = 3;
+            this.addressTextBox.Location = new System.Drawing.Point(369, 66);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(250, 20);
+            this.addressTextBox.TabIndex = 3;
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 264);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel8, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel9, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel10, 1, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 263);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(731, 124);
             this.tableLayoutPanel6.TabIndex = 4;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.cityLabel, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.cityTextBox, 0, 1);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(359, 56);
+            this.tableLayoutPanel7.TabIndex = 0;
+            // 
+            // cityLabel
+            // 
+            this.cityLabel.AutoSize = true;
+            this.cityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityLabel.Location = new System.Drawing.Point(3, 0);
+            this.cityLabel.Name = "cityLabel";
+            this.cityLabel.Size = new System.Drawing.Size(52, 25);
+            this.cityLabel.TabIndex = 0;
+            this.cityLabel.Text = "City:";
+            // 
+            // cityTextBox
+            // 
+            this.cityTextBox.Location = new System.Drawing.Point(3, 31);
+            this.cityTextBox.Name = "cityTextBox";
+            this.cityTextBox.Size = new System.Drawing.Size(250, 20);
+            this.cityTextBox.TabIndex = 1;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 1;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Controls.Add(this.stateLabel, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.stateTextBox, 0, 1);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(368, 3);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 2;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(360, 56);
+            this.tableLayoutPanel8.TabIndex = 1;
+            // 
+            // stateLabel
+            // 
+            this.stateLabel.AutoSize = true;
+            this.stateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stateLabel.Location = new System.Drawing.Point(3, 0);
+            this.stateLabel.Name = "stateLabel";
+            this.stateLabel.Size = new System.Drawing.Size(64, 25);
+            this.stateLabel.TabIndex = 0;
+            this.stateLabel.Text = "State:";
+            // 
+            // stateTextBox
+            // 
+            this.stateTextBox.Location = new System.Drawing.Point(3, 31);
+            this.stateTextBox.Name = "stateTextBox";
+            this.stateTextBox.Size = new System.Drawing.Size(250, 20);
+            this.stateTextBox.TabIndex = 1;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Controls.Add(this.zipCodeLabel, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.zipCodeTextBox, 0, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 65);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(359, 56);
+            this.tableLayoutPanel9.TabIndex = 2;
+            // 
+            // zipCodeLabel
+            // 
+            this.zipCodeLabel.AutoSize = true;
+            this.zipCodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.zipCodeLabel.Location = new System.Drawing.Point(3, 0);
+            this.zipCodeLabel.Name = "zipCodeLabel";
+            this.zipCodeLabel.Size = new System.Drawing.Size(98, 25);
+            this.zipCodeLabel.TabIndex = 0;
+            this.zipCodeLabel.Text = "Zip Code:";
+            // 
+            // zipCodeTextBox
+            // 
+            this.zipCodeTextBox.Location = new System.Drawing.Point(3, 31);
+            this.zipCodeTextBox.Name = "zipCodeTextBox";
+            this.zipCodeTextBox.Size = new System.Drawing.Size(250, 20);
+            this.zipCodeTextBox.TabIndex = 1;
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 2;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Controls.Add(this.deliveryRadioButton, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.pickupRadioButton, 1, 0);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(368, 65);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 1;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(360, 56);
+            this.tableLayoutPanel10.TabIndex = 3;
+            // 
+            // deliveryRadioButton
+            // 
+            this.deliveryRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.deliveryRadioButton.AutoSize = true;
+            this.deliveryRadioButton.Location = new System.Drawing.Point(3, 3);
+            this.deliveryRadioButton.Name = "deliveryRadioButton";
+            this.deliveryRadioButton.Size = new System.Drawing.Size(174, 50);
+            this.deliveryRadioButton.TabIndex = 0;
+            this.deliveryRadioButton.TabStop = true;
+            this.deliveryRadioButton.Text = "Delivery";
+            this.deliveryRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // pickupRadioButton
+            // 
+            this.pickupRadioButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pickupRadioButton.AutoSize = true;
+            this.pickupRadioButton.Location = new System.Drawing.Point(183, 3);
+            this.pickupRadioButton.Name = "pickupRadioButton";
+            this.pickupRadioButton.Size = new System.Drawing.Size(174, 50);
+            this.pickupRadioButton.TabIndex = 1;
+            this.pickupRadioButton.TabStop = true;
+            this.pickupRadioButton.Text = "Pick Up";
+            this.pickupRadioButton.UseVisualStyleBackColor = true;
             // 
             // OrderProcessing
             // 
@@ -278,6 +439,15 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -299,7 +469,19 @@
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Button orderSubmitButton;
         private System.Windows.Forms.Label addressLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Label cityLabel;
+        private System.Windows.Forms.TextBox cityTextBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.Label stateLabel;
+        private System.Windows.Forms.TextBox stateTextBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.Label zipCodeLabel;
+        private System.Windows.Forms.TextBox zipCodeTextBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.RadioButton deliveryRadioButton;
+        private System.Windows.Forms.RadioButton pickupRadioButton;
     }
 }

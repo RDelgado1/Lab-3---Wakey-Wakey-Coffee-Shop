@@ -33,14 +33,14 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.drinksMenuTitleLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.sodaButton = new System.Windows.Forms.Button();
             this.sodaLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.waterButton = new System.Windows.Forms.Button();
             this.waterLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.beerButton = new System.Windows.Forms.Button();
             this.beerLabel = new System.Windows.Forms.Label();
+            this.sodaButton = new System.Windows.Forms.Button();
+            this.waterButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -104,17 +104,6 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel2.Size = new System.Drawing.Size(260, 134);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // sodaButton
-            // 
-            this.sodaButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sodaButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.sodaButton.Location = new System.Drawing.Point(3, 3);
-            this.sodaButton.Name = "sodaButton";
-            this.sodaButton.Size = new System.Drawing.Size(254, 115);
-            this.sodaButton.TabIndex = 0;
-            this.sodaButton.UseVisualStyleBackColor = true;
-            this.sodaButton.Click += new System.EventHandler(this.sodaButton_Click);
-            // 
             // sodaLabel
             // 
             this.sodaLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -139,17 +128,6 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel3.Size = new System.Drawing.Size(260, 134);
             this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // waterButton
-            // 
-            this.waterButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.waterButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.waterButton.Location = new System.Drawing.Point(3, 3);
-            this.waterButton.Name = "waterButton";
-            this.waterButton.Size = new System.Drawing.Size(254, 115);
-            this.waterButton.TabIndex = 0;
-            this.waterButton.UseVisualStyleBackColor = true;
-            this.waterButton.Click += new System.EventHandler(this.waterButton_Click);
             // 
             // waterLabel
             // 
@@ -180,6 +158,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // 
             this.beerButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.beerButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.beerButton.Image = global::Lab_3___Wakey_Wakey_Coffee_Shop.Properties.Resources.beerDrinkMenu;
             this.beerButton.Location = new System.Drawing.Point(3, 3);
             this.beerButton.Name = "beerButton";
             this.beerButton.Size = new System.Drawing.Size(256, 115);
@@ -196,6 +175,30 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.beerLabel.Size = new System.Drawing.Size(29, 13);
             this.beerLabel.TabIndex = 1;
             this.beerLabel.Text = "Beer";
+            // 
+            // sodaButton
+            // 
+            this.sodaButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sodaButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.sodaButton.Image = global::Lab_3___Wakey_Wakey_Coffee_Shop.Properties.Resources.sodaDrinkMenu;
+            this.sodaButton.Location = new System.Drawing.Point(3, 3);
+            this.sodaButton.Name = "sodaButton";
+            this.sodaButton.Size = new System.Drawing.Size(254, 115);
+            this.sodaButton.TabIndex = 0;
+            this.sodaButton.UseVisualStyleBackColor = true;
+            this.sodaButton.Click += new System.EventHandler(this.sodaButton_Click);
+            // 
+            // waterButton
+            // 
+            this.waterButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.waterButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.waterButton.Image = global::Lab_3___Wakey_Wakey_Coffee_Shop.Properties.Resources.waterDrinkMenu;
+            this.waterButton.Location = new System.Drawing.Point(3, 3);
+            this.waterButton.Name = "waterButton";
+            this.waterButton.Size = new System.Drawing.Size(254, 115);
+            this.waterButton.TabIndex = 0;
+            this.waterButton.UseVisualStyleBackColor = true;
+            this.waterButton.Click += new System.EventHandler(this.waterButton_Click);
             // 
             // DrinksMenu
             // 

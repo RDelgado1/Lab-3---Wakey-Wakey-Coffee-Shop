@@ -33,11 +33,11 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.dessertMenuTitleLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.sliceOfCakeButton = new System.Windows.Forms.Button();
             this.sliceOfCakeLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.souffleButton = new System.Windows.Forms.Button();
             this.souffleLabel = new System.Windows.Forms.Label();
+            this.sliceOfCakeButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -98,17 +98,6 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel2.Size = new System.Drawing.Size(394, 134);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // sliceOfCakeButton
-            // 
-            this.sliceOfCakeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sliceOfCakeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.sliceOfCakeButton.Location = new System.Drawing.Point(3, 3);
-            this.sliceOfCakeButton.Name = "sliceOfCakeButton";
-            this.sliceOfCakeButton.Size = new System.Drawing.Size(388, 115);
-            this.sliceOfCakeButton.TabIndex = 0;
-            this.sliceOfCakeButton.UseVisualStyleBackColor = true;
-            this.sliceOfCakeButton.Click += new System.EventHandler(this.sliceOfCakeButton_Click);
-            // 
             // sliceOfCakeLabel
             // 
             this.sliceOfCakeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -138,6 +127,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // 
             this.souffleButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.souffleButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.souffleButton.Image = global::Lab_3___Wakey_Wakey_Coffee_Shop.Properties.Resources.souffleDessertMenu;
             this.souffleButton.Location = new System.Drawing.Point(3, 3);
             this.souffleButton.Name = "souffleButton";
             this.souffleButton.Size = new System.Drawing.Size(388, 115);
@@ -154,6 +144,18 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.souffleLabel.Size = new System.Drawing.Size(40, 13);
             this.souffleLabel.TabIndex = 1;
             this.souffleLabel.Text = "Souffle";
+            // 
+            // sliceOfCakeButton
+            // 
+            this.sliceOfCakeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sliceOfCakeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.sliceOfCakeButton.Image = global::Lab_3___Wakey_Wakey_Coffee_Shop.Properties.Resources.cakeDessertMenu;
+            this.sliceOfCakeButton.Location = new System.Drawing.Point(3, 3);
+            this.sliceOfCakeButton.Name = "sliceOfCakeButton";
+            this.sliceOfCakeButton.Size = new System.Drawing.Size(388, 115);
+            this.sliceOfCakeButton.TabIndex = 0;
+            this.sliceOfCakeButton.UseVisualStyleBackColor = true;
+            this.sliceOfCakeButton.Click += new System.EventHandler(this.sliceOfCakeButton_Click);
             // 
             // DessertMenu
             // 

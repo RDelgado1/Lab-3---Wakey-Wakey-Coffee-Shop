@@ -29,18 +29,19 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FoodMenu));
             this.foodBackButton = new System.Windows.Forms.Button();
             this.foodMenuTitleLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.burgerButton = new System.Windows.Forms.Button();
             this.burgerLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pizzaButton = new System.Windows.Forms.Button();
             this.pizzaLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.saladButton = new System.Windows.Forms.Button();
             this.saladLabel = new System.Windows.Forms.Label();
+            this.burgerButton = new System.Windows.Forms.Button();
+            this.pizzaButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -50,7 +51,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // foodBackButton
             // 
             this.foodBackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.foodBackButton.Location = new System.Drawing.Point(3, 424);
+            this.foodBackButton.Location = new System.Drawing.Point(3, 464);
             this.foodBackButton.Name = "foodBackButton";
             this.foodBackButton.Size = new System.Drawing.Size(75, 23);
             this.foodBackButton.TabIndex = 0;
@@ -86,7 +87,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(810, 490);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -96,30 +97,19 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel2.Controls.Add(this.burgerButton, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.burgerLabel, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 143);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 156);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(260, 134);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(263, 147);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // burgerButton
-            // 
-            this.burgerButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.burgerButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.burgerButton.Location = new System.Drawing.Point(3, 3);
-            this.burgerButton.Name = "burgerButton";
-            this.burgerButton.Size = new System.Drawing.Size(254, 115);
-            this.burgerButton.TabIndex = 0;
-            this.burgerButton.UseVisualStyleBackColor = true;
-            this.burgerButton.Click += new System.EventHandler(this.burgerButton_Click);
             // 
             // burgerLabel
             // 
             this.burgerLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.burgerLabel.AutoSize = true;
-            this.burgerLabel.Location = new System.Drawing.Point(111, 121);
+            this.burgerLabel.Location = new System.Drawing.Point(112, 134);
             this.burgerLabel.Name = "burgerLabel";
             this.burgerLabel.Size = new System.Drawing.Size(38, 13);
             this.burgerLabel.TabIndex = 1;
@@ -132,30 +122,19 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel3.Controls.Add(this.pizzaButton, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.pizzaLabel, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(269, 143);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(272, 156);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(260, 134);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(264, 147);
             this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // pizzaButton
-            // 
-            this.pizzaButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pizzaButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.pizzaButton.Location = new System.Drawing.Point(3, 3);
-            this.pizzaButton.Name = "pizzaButton";
-            this.pizzaButton.Size = new System.Drawing.Size(254, 115);
-            this.pizzaButton.TabIndex = 0;
-            this.pizzaButton.UseVisualStyleBackColor = true;
-            this.pizzaButton.Click += new System.EventHandler(this.pizzaButton_Click);
             // 
             // pizzaLabel
             // 
             this.pizzaLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pizzaLabel.AutoSize = true;
-            this.pizzaLabel.Location = new System.Drawing.Point(95, 121);
+            this.pizzaLabel.Location = new System.Drawing.Point(97, 134);
             this.pizzaLabel.Name = "pizzaLabel";
             this.pizzaLabel.Size = new System.Drawing.Size(70, 13);
             this.pizzaLabel.TabIndex = 1;
@@ -168,21 +147,22 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             this.tableLayoutPanel4.Controls.Add(this.saladButton, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.saladLabel, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(535, 143);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(542, 156);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(262, 134);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(265, 147);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // saladButton
             // 
             this.saladButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.saladButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.saladButton.Image = global::Lab_3___Wakey_Wakey_Coffee_Shop.Properties.Resources.saladFoodMenu;
             this.saladButton.Location = new System.Drawing.Point(3, 3);
             this.saladButton.Name = "saladButton";
-            this.saladButton.Size = new System.Drawing.Size(256, 115);
+            this.saladButton.Size = new System.Drawing.Size(259, 128);
             this.saladButton.TabIndex = 0;
             this.saladButton.UseVisualStyleBackColor = true;
             this.saladButton.Click += new System.EventHandler(this.saladButton_Click);
@@ -191,17 +171,41 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             // 
             this.saladLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.saladLabel.AutoSize = true;
-            this.saladLabel.Location = new System.Drawing.Point(114, 121);
+            this.saladLabel.Location = new System.Drawing.Point(115, 134);
             this.saladLabel.Name = "saladLabel";
             this.saladLabel.Size = new System.Drawing.Size(34, 13);
             this.saladLabel.TabIndex = 1;
             this.saladLabel.Text = "Salad";
             // 
+            // burgerButton
+            // 
+            this.burgerButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.burgerButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.burgerButton.Image = ((System.Drawing.Image)(resources.GetObject("burgerButton.Image")));
+            this.burgerButton.Location = new System.Drawing.Point(3, 3);
+            this.burgerButton.Name = "burgerButton";
+            this.burgerButton.Size = new System.Drawing.Size(257, 128);
+            this.burgerButton.TabIndex = 0;
+            this.burgerButton.UseVisualStyleBackColor = true;
+            this.burgerButton.Click += new System.EventHandler(this.burgerButton_Click);
+            // 
+            // pizzaButton
+            // 
+            this.pizzaButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pizzaButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.pizzaButton.Image = global::Lab_3___Wakey_Wakey_Coffee_Shop.Properties.Resources.pizzaFoodMenu;
+            this.pizzaButton.Location = new System.Drawing.Point(3, 3);
+            this.pizzaButton.Name = "pizzaButton";
+            this.pizzaButton.Size = new System.Drawing.Size(258, 128);
+            this.pizzaButton.TabIndex = 0;
+            this.pizzaButton.UseVisualStyleBackColor = true;
+            this.pizzaButton.Click += new System.EventHandler(this.pizzaButton_Click);
+            // 
             // FoodMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(810, 490);
             this.Controls.Add(this.foodMenuTitleLabel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FoodMenu";

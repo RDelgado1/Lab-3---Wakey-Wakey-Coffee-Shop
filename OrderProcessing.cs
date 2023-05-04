@@ -35,12 +35,20 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
         DateTime date = DateTime.Today;
 
-        string custFirstName;
-        string custLastName;
-        string custEmail;
+        string custFirstName, custLastName, custEmail;
+
+        string custAdd, custCity, custState, custZip;
 
         int IDNum, orderNum;
         int orderNumDisplay;
+        string deliveryOrPickup;
+
+        private string[] zipcodeArray =
+        {
+            "10301", "10302", "10303", "10304", "10305",
+            "10306", "10307", "10308", "10309", "10310",
+            "10311", "10312", "10313", "10314"
+        };
       
         private void newOrder(int orNum)
         {
@@ -92,12 +100,12 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
                 int idCheck = Convert.ToInt32(cmd.ExecuteScalar());
 
-                Console.WriteLine(count);
+                //Console.WriteLine(count);
 
                 if (idCheck > 0)
                 {
                     IDNum = rnd.Next(0, 1000000);
-                    Console.WriteLine(IDNum);
+                    //Console.WriteLine(IDNum);
                 }
 
                 newGuest(orderNum);
@@ -144,9 +152,58 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             }
         }
 
+        private void orderCreation()
+        {
+            int count;
+
+            firstNameTextBox.Text = string.Empty;
+            lastNameTextBox.Text = string.Empty;
+            emailTextBox.Text = string.Empty;
+
+            addressTextBox.Text = string.Empty;
+            cityTextBox.Text = string.Empty;
+            stateTextBox.Text = string.Empty;
+            zipCodeTextBox.Text = string.Empty;
+
+            //Console.WriteLine("zip in the area");
+
+            try
+            {
+                string searchOrderNum = "SELECT COUNT(*) FROM placedorders where placedOrder_number = " + orderNum;
+
+                conn = new MySqlConnection(connection_string);
+                cmd = new MySqlCommand(searchOrderNum, conn);
+
+                conn.Open();
+
+                count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                Console.WriteLine(count);
+
+                if (count > 0)
+                {
+                    orderNum = rnd.Next(0, 1000000);
+                    Console.WriteLine(orderNum);
+                }
+
+                newOrder(orderNum);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(string.Format("An error occurred {0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (reader != null) reader.Close();
+                if (conn != null) conn.Close();
+            }
+        }
+
         public OrderProcessing()
         {
             InitializeComponent();
+
+            if(pickupRadioButton.Checked == true) { Console.Write("eeoriuejrkgb "); }
         }
 
         private void oderProcessingCancelButton_Click(object sender, EventArgs e)
@@ -161,42 +218,28 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             custLastName = lastNameTextBox.Text;
             custEmail = emailTextBox.Text;
 
-            int count;
+            custAdd = addressTextBox.Text;
+            custCity = cityTextBox.Text;
+            custState = stateTextBox.Text;
+            custZip = zipCodeTextBox.Text;
 
             orderNum = rnd.Next(0, 1000000);
 
-            if (!string.IsNullOrEmpty(custFirstName) && !string.IsNullOrEmpty(custLastName) && !string.IsNullOrEmpty(custEmail))
+            
+
+            if (!string.IsNullOrEmpty(custFirstName) && !string.IsNullOrEmpty(custLastName) && !string.IsNullOrEmpty(custEmail) &&
+                !string.IsNullOrEmpty(custAdd) && !string.IsNullOrEmpty(custCity) &&
+                !string.IsNullOrEmpty(custState) && !string.IsNullOrEmpty(custZip))
             {
                 //Console.WriteLine(firstNameTextBox.Text + " " + " " + lastNameTextBox.Text);
 
-                firstNameTextBox.Text = string.Empty;
-                lastNameTextBox.Text = string.Empty;
-                emailTextBox.Text = string.Empty;
-
-                try
+                if(zipcodeArray.Contains(custZip) && deliveryRadioButton.Checked == true)
                 {
-                    string searchOrderNum = "SELECT COUNT(*) FROM placedorders where placedOrder_number = " + orderNum;
-
-                    conn = new MySqlConnection(connection_string);
-                    cmd = new MySqlCommand(searchOrderNum, conn);
-
-                    conn.Open();
-
-                    count = Convert.ToInt32(cmd.ExecuteScalar());
-
-                    Console.WriteLine(count);
-
-                    if(count > 0)
-                    {
-                        orderNum = rnd.Next(0, 1000000);
-                        Console.WriteLine(orderNum);
-                    }
-                    
-                    newOrder(orderNum);
+                    orderCreation();
 
                     if (flag.payBool == true)
                     {
-                        var confirmResult = MessageBox.Show("Order # " + orderNumDisplay + " was successfully made", "New Order", MessageBoxButtons.OK);
+                        var confirmResult = MessageBox.Show("Order #" + orderNumDisplay + " was successfully placed", "New Order", MessageBoxButtons.OK);
 
 
                         if (confirmResult == DialogResult.OK)
@@ -206,23 +249,35 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                             ShoppingCart.drinkMenuCart.Clear();
                             ShoppingCart.dessertMenuCart.Clear();
 
-                            Console.WriteLine(ShoppingCart.foodMenuCart.Count);
+                            //Console.WriteLine(ShoppingCart.foodMenuCart.Count);
 
                             this.Close();
                         }
                     }
                 }
-                catch (Exception ex)
+                else if(pickupRadioButton.Checked == true)
                 {
-                    MessageBox.Show(string.Format("An error occurred {0}", ex.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    if (reader != null) reader.Close();
-                    if (conn != null) conn.Close();
+                    orderCreation();
+
+                    if (flag.payBool == true)
+                    {
+                        var confirmResult = MessageBox.Show("Order #" + orderNumDisplay + " was successfully sent to the restaurant", "New Order", MessageBoxButtons.OK);
+
+                        if (confirmResult == DialogResult.OK)
+                        {
+
+                            ShoppingCart.foodMenuCart.Clear();
+                            ShoppingCart.drinkMenuCart.Clear();
+                            ShoppingCart.dessertMenuCart.Clear();
+
+                            //Console.WriteLine(ShoppingCart.foodMenuCart.Count);
+
+                            this.Close();
+                        }
+                    }
                 }
             }
-            else if(string.IsNullOrEmpty(firstNameTextBox.Text) && string.IsNullOrEmpty(lastNameTextBox.Text) && string.IsNullOrEmpty(emailTextBox.Text))
+            else 
             {
                 var confirmResult = MessageBox.Show("Please Fill Out the Required Information", "New Order", MessageBoxButtons.OK);
             }
