@@ -41,7 +41,6 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
         int IDNum, orderNum;
         int orderNumDisplay;
-        string deliveryOrPickup;
 
         private string[] zipcodeArray =
         {
@@ -50,15 +49,15 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             "10311", "10312", "10313", "10314"
         };
       
-        private void newOrder(int orNum)
+        private void newOrder(int orNum, string method)
         {
             orderNumDisplay = orNum;
             flag.payBool = true;
 
             try
             {
-                string placedOrderSQL = "INSERT INTO placedorders (placedOrder_number, placedOrder_date, placedOrder_amount, prod_count)" +
-                " VALUES (@placedOrder_number, @placedOrder_date, @placedOrder_amount, @prod_count)";
+                string placedOrderSQL = "INSERT INTO placedorders (placedOrder_number, placedOrder_date, placedOrder_amount, prod_count, method)" +
+                " VALUES (@placedOrder_number, @placedOrder_date, @placedOrder_amount, @prod_count, @method)";
 
 
                 conn = new MySqlConnection(connection_string);
@@ -70,6 +69,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                 cmd.Parameters.AddWithValue("@placedOrder_Date", date);
                 cmd.Parameters.AddWithValue("@placedOrder_amount", tot.grandTotal);
                 cmd.Parameters.AddWithValue("@prod_count", count.totalMenu);
+                cmd.Parameters.AddWithValue("@method", method);
 
                 cmd.ExecuteNonQuery();
 
@@ -155,6 +155,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         private void orderCreation()
         {
             int count;
+            string deliveryPickup = null;
 
             firstNameTextBox.Text = string.Empty;
             lastNameTextBox.Text = string.Empty;
@@ -186,7 +187,16 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                     Console.WriteLine(orderNum);
                 }
 
-                newOrder(orderNum);
+                if(deliveryRadioButton.Checked == true)
+                {
+                    deliveryPickup = "Delivery";
+                }
+                else if(pickupRadioButton.Checked == true)
+                {
+                    deliveryPickup = "Pickup";
+                }
+
+                newOrder(orderNum, deliveryPickup);
             }
             catch (Exception ex)
             {
