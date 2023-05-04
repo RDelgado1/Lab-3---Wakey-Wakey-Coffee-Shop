@@ -25,6 +25,8 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         MySqlCommand cmd = null;
         MySqlDataReader reader = null;
 
+        int itemsToBeAdded = 0;
+
         public class drinkItem
         {
             public int id;
@@ -69,7 +71,85 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             //Console.WriteLine(burgerLabel.Text + " was added to cart");
             ShoppingCart.drinkMenuCart.Add(drinkCart);
 
-            var burgerConfirm = MessageBox.Show(drinkCart.drinkName + " was added to your cart!", "Success!", MessageBoxButtons.OK);
+            //var burgerConfirm = MessageBox.Show(drinkCart.drinkName + " was added to your cart!", "Success!", MessageBoxButtons.OK);
+        }
+
+        private void drinktemCountSelect(string itemName)
+        {
+            Form itemCount = new Form()
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                Size = new Size(300, 125),
+                Text = itemName
+            };
+
+            Label itemQuestion = new Label()
+            {
+                AutoSize = false,
+                TextAlign = ContentAlignment.MiddleCenter,
+                Dock = DockStyle.Top,
+                Text = "How many " + itemName + "s do you want to add to your cart?"
+            };
+
+            ComboBox itemCountSelection = new ComboBox()
+            {
+                Text = "-- Select --",
+                Dock = DockStyle.Top,
+            };
+
+            for (int a = 0; a < 10; a++)
+                itemCountSelection.Items.Add(a + 1);
+
+            Button addButton = new Button()
+            {
+                Text = "Add",
+                Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top
+            };
+
+            TableLayoutPanel itemCountSelecLayout = new TableLayoutPanel()
+            {
+                Dock = DockStyle.Fill
+            };
+
+
+            itemCountSelecLayout.RowCount = 2;
+            itemCountSelecLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize, 52));
+            itemCountSelecLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize, 52));
+            itemCountSelecLayout.RowStyles.Add(new RowStyle(SizeType.AutoSize, 52));
+            itemCountSelecLayout.Controls.Add(itemQuestion, 0, 0);
+            itemCountSelecLayout.Controls.Add(itemCountSelection, 0, 1);
+            itemCountSelecLayout.Controls.Add(addButton, 0, 2);
+
+            itemCount.Controls.Add(itemCountSelecLayout);
+
+            itemCount.Show();
+
+            addButton.Click += (sender, args) =>
+            {
+                itemsToBeAdded = (int)itemCountSelection.SelectedItem;
+                Console.WriteLine(itemsToBeAdded);
+
+                for (int a = 0; a < itemsToBeAdded; a++)
+                {
+                    if (itemName == sodaLabel.Text)
+                    {
+                        drinkGet(4);
+                        itemCount.Close();
+                    }
+                    else if (itemName == waterLabel.Text)
+                    {
+                        drinkGet(5);
+                        itemCount.Close();
+                    }
+                    else if (itemName == beerLabel.Text)
+                    {
+                        drinkGet(6);
+                        itemCount.Close();
+                    }
+                }
+
+                var confirmResult = MessageBox.Show(itemsToBeAdded + " " + itemName + "(s) were added to your cart", "Added to cart", MessageBoxButtons.OK);
+            };
         }
 
         public DrinksMenu()
@@ -84,33 +164,18 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
         private void sodaButton_Click(object sender, EventArgs e)
         {
-            
-            var confirmResult = MessageBox.Show("Do you want to add " + sodaLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
 
-            if (confirmResult == DialogResult.Yes)
-            {
-                drinkGet(4);
-            }
+            drinktemCountSelect(sodaLabel.Text);
         }
 
         private void waterButton_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Do you want to add " + waterLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
-
-            if (confirmResult == DialogResult.Yes)
-            {
-                drinkGet(5);
-            }
+            drinktemCountSelect(waterLabel.Text);
         }
 
         private void beerButton_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Do you want to add " + beerLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
-
-            if (confirmResult == DialogResult.Yes)
-            {
-                drinkGet(6);
-            }
+            drinktemCountSelect(beerLabel.Text);
         }
     }
 }

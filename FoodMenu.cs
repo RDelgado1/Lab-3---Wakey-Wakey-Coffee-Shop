@@ -76,7 +76,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
             //var burgerConfirm = MessageBox.Show(foodCart.foodName + " was added to your cart!", "Success!", MessageBoxButtons.OK);
     }
 
-        private void itemCountSelect(string itemName)
+        private void foodItemCountSelect(string itemName)
         {
             Form itemCount = new Form()
             {
@@ -150,7 +150,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                     }
                 }
 
-                var confirmResult = MessageBox.Show(itemsToBeAdded + " " + burgerLabel.Text + "(s) were added to your cart", "Added to cart", MessageBoxButtons.OK);
+                var confirmResult = MessageBox.Show(itemsToBeAdded + " " + itemName + "(s) were added to your cart", "Added to cart", MessageBoxButtons.OK);
             };
         }
 
@@ -166,31 +166,17 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
         private void burgerButton_Click(object sender, EventArgs e)
         {
-            itemCountSelect(burgerLabel.Text);
+            foodItemCountSelect(burgerLabel.Text);
         }
 
         private void pizzaButton_Click(object sender, EventArgs e)
         {
-            /*var confirmResult = MessageBox.Show("Do you want to add " + pizzaLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
-
-            if (confirmResult == DialogResult.Yes)
-            {
-                foodGet(2);
-            }*/
-
-            itemCountSelect(pizzaLabel.Text);
+            foodItemCountSelect(pizzaLabel.Text);
         }
 
         private void saladButton_Click(object sender, EventArgs e)
         {
-            /*var confirmResult = MessageBox.Show("Do you want to add " + saladLabel.Text + " to your cart?", "Add to cart", MessageBoxButtons.YesNo);
-
-            if (confirmResult == DialogResult.Yes)
-            {
-                foodGet(3);
-            }*/
-
-            itemCountSelect(saladLabel.Text);
+            foodItemCountSelect(saladLabel.Text);
         }
 
     }
