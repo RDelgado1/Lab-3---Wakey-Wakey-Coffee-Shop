@@ -213,7 +213,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
         {
             InitializeComponent();
 
-            if(pickupRadioButton.Checked == true) { Console.Write("eeoriuejrkgb "); }
+            deliveryRadioButton.Checked = true;
         }
 
         private void oderProcessingCancelButton_Click(object sender, EventArgs e)
@@ -237,35 +237,56 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
             
 
-            if (!string.IsNullOrEmpty(custFirstName) && !string.IsNullOrEmpty(custLastName) && !string.IsNullOrEmpty(custEmail) &&
+            if (!string.IsNullOrEmpty(custFirstName) && !string.IsNullOrEmpty(custLastName) && !string.IsNullOrEmpty(custEmail) /*&&
                 !string.IsNullOrEmpty(custAdd) && !string.IsNullOrEmpty(custCity) &&
-                !string.IsNullOrEmpty(custState) && !string.IsNullOrEmpty(custZip))
+                !string.IsNullOrEmpty(custState) && !string.IsNullOrEmpty(custZip)*/)
             {
                 //Console.WriteLine(firstNameTextBox.Text + " " + " " + lastNameTextBox.Text);
 
-                if(zipcodeArray.Contains(custZip) && deliveryRadioButton.Checked == true)
+                if (!string.IsNullOrEmpty(custAdd) && !string.IsNullOrEmpty(custCity) &&
+                !string.IsNullOrEmpty(custState) && !string.IsNullOrEmpty(custZip))
                 {
-                    orderCreation();
-
-                    if (flag.payBool == true)
+                    if (zipcodeArray.Contains(custZip) && deliveryRadioButton.Checked == true)
                     {
-                        var confirmResult = MessageBox.Show("Order #" + orderNumDisplay + " was successfully placed", "New Order", MessageBoxButtons.OK);
+                        orderCreation();
 
-
-                        if (confirmResult == DialogResult.OK)
+                        if (flag.payBool == true)
                         {
+                            var confirmResult = MessageBox.Show("Order #" + orderNumDisplay + " was successfully placed", "New Order", MessageBoxButtons.OK);
 
-                            ShoppingCart.foodMenuCart.Clear();
-                            ShoppingCart.drinkMenuCart.Clear();
-                            ShoppingCart.dessertMenuCart.Clear();
 
-                            //Console.WriteLine(ShoppingCart.foodMenuCart.Count);
+                            if (confirmResult == DialogResult.OK)
+                            {
 
-                            this.Close();
+                                ShoppingCart.foodMenuCart.Clear();
+                                ShoppingCart.drinkMenuCart.Clear();
+                                ShoppingCart.dessertMenuCart.Clear();
+
+                                //Console.WriteLine(ShoppingCart.foodMenuCart.Count);
+
+                                this.Close();
+                            }
+                        }
+                    }
+
+                    if (!zipcodeArray.Contains(custZip))
+                    {
+                        //Console.WriteLine("zip not in area");
+
+                        var confrimResult = MessageBox.Show("Unfortunately, we can't deliver to your address, do you want to pick instead?", "Pick up order", MessageBoxButtons.YesNo);
+                        if(confrimResult == DialogResult.Yes)
+                        {
+                            Console.WriteLine("yesyesyesyes");
+                            addressTextBox.Text = string.Empty;
+                            cityTextBox.Text = string.Empty;
+                            stateLabel.Text = string.Empty;
+                            zipCodeTextBox.Text = string.Empty;
+
+                            pickupRadioButton.Checked = true;
                         }
                     }
                 }
-                else if(pickupRadioButton.Checked == true)
+                else if (pickupRadioButton.Checked == true)
                 {
                     orderCreation();
 
@@ -285,7 +306,16 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                             this.Close();
                         }
                     }
+                    
                 }
+                else
+                {
+                    Console.WriteLine("errororoorororor");
+                    var confirmResult = MessageBox.Show("Please enter the address for delivery", "New Order", MessageBoxButtons.OK);
+                }
+
+
+                
             }
             else 
             {
