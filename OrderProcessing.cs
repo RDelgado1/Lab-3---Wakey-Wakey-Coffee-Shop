@@ -286,7 +286,8 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
                         }
                     }
                 }
-                else if (pickupRadioButton.Checked == true)
+                else if (pickupRadioButton.Checked == true && ( string.IsNullOrEmpty(custAdd) || string.IsNullOrEmpty(custCity) &&
+                string.IsNullOrEmpty(custState) || string.IsNullOrEmpty(custZip)))
                 {
                     orderCreation();
 
