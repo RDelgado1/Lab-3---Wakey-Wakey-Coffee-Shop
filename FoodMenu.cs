@@ -95,7 +95,7 @@ namespace Lab_3___Wakey_Wakey_Coffee_Shop
 
             ComboBox itemCountSelection = new ComboBox()
             {
-                Text = "-- Select --",
+                Text = "-- Select " + itemName + " Quantity --",
                 Dock = DockStyle.Top,
             };
             
